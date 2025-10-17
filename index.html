@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرخي العالمية - تصميم عصري</title>
+    <!-- ربط ملف الـ CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- الهيدر وشريط التنقل -->
+    <header id="main-header">
+        <div class="container header-content">
+              <div class="logo">
+                <a href="#">
+                    <!-- الإضافة: استخدام صورة اللوجو بدلاً من الـ H1 -->
+                    <img src="images/logo.png" alt="Al Raki International Logo" class="main-logo-img">
+                    <span class="sub-text">Al Raki International Ltd</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <a href="#home">
+                    <span class="lang-ar">الرئيسية</span>
+                    <span class="lang-en">home</span>
+                </a>
+                <a href="#services">
+                    <span class="lang-ar">خدماتنا</span>
+                    <span class="lang-en">services</span>
+                </a>
+                <a href="#why-choose-us">
+                    <span class="lang-ar">عن الشركة</span>
+                    <span class="lang-en">About</span>
+                </a>
+                <a href="#certificates">
+                    <span class="lang-ar">الشهادات</span>
+                    <span class="lang-en">Certificates</span>
+                </a>
+                <a href="#achievements">
+                    <span class="lang-ar">الانجازات</span>
+                    <span class="lang-en">achievements</span>
+                </a>
+                <a href="#contact" class="cta-button">
+                    <span class="lang-ar" >تواصل معنا</span>
+                    <span class="lang-en">contact Us</span>
+                </a>
+                <!-- <a href="#contact" class="cta-button">تواصل معنا</a> -->
+                <div class="language-switcher">
+                    <button id="lang-toggle" data-lang="en">English</button>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 1. البانر الرئيسي / السلايدر (Hero Section) -->
+    <section id="hero-slider" class="hero-slider-container">
+        <!-- شريحة السلايدر 1 -->
+        <div class="hero-slide active-slide" style="background-image: url('images/img9.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <!-- <div class="experience-badge">خبرة أكثر من ٤٠ عامًا</div> الإضافة الجديدة -->
+                <h1>ريادة في خدمات الحفر والجيوفيزياء</h1>
+                <p>حلول متكاملة وموثوقة لإدارة الموارد المائية والطاقة.</p>
+                <a href="#services" class="primary-button">اكتشف خدماتنا</a>
+            </div>
+        </div>
+
+        <!-- شريحة السلايدر 2 -->
+        <div class="hero-slide" style="background-image: url('images/img8.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <!-- <div class="experience-badge">خبرة أكثر من ٤٠ عامًا</div> الإضافة الجديدة -->
+                <h1>أحدث التقنيات في المسح الجيولوجي</h1>
+                <p>تخطيط دقيق لضمان نجاح مشروعك من البداية.</p>
+                <a href="#contact" class="primary-button">اطلب استشارة</a>
+            </div>
+        </div>
+
+        <!-- شريحة السلايدر 3 -->
+        <div class="hero-slide" style="background-image: url('images/img6.jpeg');">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <!-- <div class="experience-badge">خبرة أكثر من ٤٠ عامًا</div> الإضافة الجديدة -->
+                <h1>تنفيذ شبكات الإمداد المائي بكفاءة</h1>
+                <p>تصميم وتطبيق حلول مستدامة للمياه والبنية التحتية.</p>
+                <a href="#projects" class="primary-button">شاهد مشاريعنا</a>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل (لليسار واليمين) -->
+        <button class="slider-nav prev" aria-label="السابق">❮</button>
+        <button class="slider-nav next" aria-label="التالي">❯</button>
+
+        <!-- نقاط المؤشر (Dots Indicators) - تُنشأ بواسطة JS غالباً -->
+        <div class="slider-dots"></div>
+
+    </section>
+
+    <!-- 2. قسم الخدمات (Our Services) -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">خدماتنا الرئيسية</h2>
+            <div class="services-grid">
+                <!-- بطاقة الخدمة الأولى -->
+                <div class="service-card">
+                    <img src="images/img9.jpeg" alt="Drilling Section">
+                    <h3>قسم الحفر</h3>
+                    <p>أعمال الحفر العميقة والسطحية باستخدام أحدث المعدات.</p>
+                </div>
+                <!-- بطاقة الخدمة الثانية -->
+                <div class="service-card">
+                    <img src="images/img3.jpeg" alt="Water Well Development">
+                    <h3>تطوير وصيانة الآبار</h3>
+                    <p>صيانة وتطوير آبار المياه لضمان أقصى كفاءة.</p>
+                </div>
+                <!-- بطاقة الخدمة الثالثة -->
+                <div class="service-card">
+                    <img src="images/img1.jpeg" alt="Geophysical Studies">
+                    <h3>دراسات جيوفيزيائية وتخطيط</h3>
+                    <p>مسح شامل للمواقع وتحليل البيانات الجيولوجية.</p>
+                </div>
+                <!-- بطاقة الخدمة الرابعة -->
+                <div class="service-card">
+                    <img src="images/img5.jpeg" alt="Water Supply Systems">
+                    <h3>تصميم أنظمة الإمداد المائي</h3>
+                    <p>تصميم وتنفيذ شبكات إمداد المياه المتكاملة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم لماذا تختارنا وصورة المدير -->
+    <section id="why-choose-us" class="section-padding bg-light">
+        <div class="container two-column-layout">
+            <!-- العمود الأيمن: صورة المدير والتصميم المدمج -->
+            <!-- العمود الأيمن: صورة المدير والتصميم المدمج -->
+            <div class="manager-photo-box">
+                <img src="images/img7.jpeg" alt="صورة المدير" class="manager-photo">
+                <div class="manager-quote">
+                    <h4>محمود بابكر كيله</h4>
+                    <h5>المدير العام ورئيس المجلس الإدارة</h5>
+                </div>
+            </div>
+            <!-- العمود الأيسر: النص والمزايا -->
+            <div class="why-choose-content">
+                <h2 class="section-title">كلمة المدير العام</h2>
+                <p><strong>محمود بابكر كيله</strong> المدير العام ورئيس المجلس الإدارة، تخرج في أكتوبر 1978. التحق بشركة
+                    الرخي العالمية المحدودة لحفر الآبار في المملكة العربية السعودية عام 1983. وفي عام 1986 أسس فرع شركة
+                    الرخي العالمية لحفر الآبار في السودان. ولا يزال يواصل قيادة شركة الرخي العالمية المحدودة بصفته
+                    المدير العام ورئيس المجلس الإدارة.</p>
+
+                <!-- سنستخدم التعريف الإنجليزي في مكان الفقرة الطويلة للـ Lorem Ipsum -->
+                <p class="en-bio">General Manager and Head of Administrative Council. Graduated 10/1978. Joint Alrakhie
+                    International Co., ltd for well drilling Saudi Arabia 1983. In 1986, he established Alrakhie Int.
+                    drilling co. Sudan Branch. He is still leading Alrakhie Int. Co. ltd As General Manager & Head
+                    Administrative Council.</p>
+
+                <h3 class="mt-30">لماذا تختار شركة الرخي؟</h3>
+                <!-- قائمة المزايا -->
+                <ul class="features-list">
+                    <li><span class="icon">✓</span> أسطول معدات حديث ومتطور.</li>
+                    <li><span class="icon">✓</span> فريق هندسي ذو خبرة عالمية.</li>
+                    <li><span class="icon">✓</span> سجل حافل من المشاريع الضخمة.</li>
+                    <li><span class="icon">✓</span> التزام صارم بالسلامة والجودة.</li>
+                </ul>
+                <a href="#about" class="secondary-button">اقرأ المزيد عن تاريخنا</a>
+            </div>
+
+    </section>
+
+    <!-- 3. قسم الشهادات (Certificates) - تم تحديث المحتوى ليعكس شهادات الإنجاز -->
+    <section id="certificates" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-ar">شهادات الإنجاز واعتماد الشركاء</span>
+                <span class="lang-en inline-display">Performance & Partner Accreditation</span>
+            </h2>
+
+            <div class="certificates-grid">
+
+                <!-- شهادة 1: 2B Operating Company (أحدث شهادة إنجاز) -->
+                <div class="certificate-card">
+                    <div class="cert-icon"><i class="fas fa-check-double"></i></div>
+                    <h3>
+                        <span class="lang-ar">شهادة إنجاز - 2B Operating Co.</span>
+                        <span class="lang-en inline-display">Performance Certificate - 2B Op Co.</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">إتمام 30 بئراً مائياً وأعمال صيانة لبرنامج مشاريع المياه (2017 -
+                            الآن).</span>
+                        <span class="lang-en inline-display">Completion of 30+ water wells and maintenance for the water
+                            projects program (2017 - Present).</span>
+                    </p>
+                    <a href="cert-2b-opco.pdf" target="_blank" class="download-link">
+                        <i class="fas fa-file-pdf"></i>
+                        <span class="lang-ar">عرض الشهادة (PDF)</span>
+                        <span class="lang-en inline-display">View Certificate (PDF)</span>
+                    </a>
+                </div>
+
+                <!-- شهادة 2: GNPOC (شهادة مشاريع كبرى وتاريخ طويل) -->
+                <div class="certificate-card">
+                    <div class="cert-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>
+                        <span class="lang-ar">شهادة شراكة - GNPOC</span>
+                        <span class="lang-en inline-display">Partnership Certificate - GNPOC</span>
+                    </h3>
+                    <p>
+                        <span class="lang-ar">شراكة مع شركة النيل الكبرى لتنفيذ برامج المياه والمشاريع الاجتماعية
+                            (1999-2017).</span>
+                        <span class="lang-en inline-display">Partnership with Greater Nile Company to execute water
+                            programs and community projects (1999-2017).</span>
+                    </p>
+                    <a href="cert-gnpoc.pdf" target="_blank" class="download-link">
+                        <i class="fas fa-file-pdf"></i>
+                        <span class="lang-ar">عرض الشهادة (PDF)</span>
+                        <span class="lang-en inline-display">View Certificate (PDF)</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- 4. قسم الإنجازات (Achievements) - إضافة جديدة -->
+    <section id="achievements" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">إنجازاتنا البارزة</h2>
+
+            <div class="achievements-accordion">
+
+                <!-- بند الإنجاز 1: الدراسات الجيوفيزيائية -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        الدراسات الجيوفيزيائية <span class="en-title"></span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- المحتوى العربي -->
+                        <p>قامت الشركة بعدد من الدراسات في مجال الجيوفيزياء في المواقع التالية:</p>
+                        <ul>
+                            <li>جبال النوبة في قرية كايقا قيرو.</li>
+                            <li>شمال كردفان، قرية البنات.</li>
+                            <li>شرق السودان، سنكات، قبيط، دردريب.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- بند الإنجاز 2: تسجيل آبار المياه بالكهرباء (Logging) -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        تسجيل آبار المياه بالكهرباء <span class="en-title"></span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- المحتوى العربي -->
+                        <p>نفذت الشركة عمليات تسجيل كهربائي للآبار للمساعدة في تحديد المياه المالحة ومكامن المياه في
+                            المناطق التالية:</p>
+                        <ul>
+                            <li>ولاية الجزيرة، منطقة المناقل.</li>
+                            <li>غرب كردفان.</li>
+                            <li>الخرطوم، آبار الشرطة.</li>
+                            <li>نجمة النيل، قرية الحرتياب.</li>
+                            <li>أمدرمان وبحري، مصنع ثلج البرقدار.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- بند الإنجاز 3: آليات الرخي للأنابيب والأساسات الخرسانية -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        آليات الرخي للأنابيب والأساسات الخرسانية <span class="en-title"></span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- المحتوى العربي -->
+                        <p>تمتلك الشركة ثلاث ماكينات حفر يمكنها الحفر لعمق 30 مترًا وبمحيط 100 سم. وهي من نوعين: إيطالية
+                            (بواسطة حامل) وبريطانية (بواسطة عجلات).</p>
+                        <p><strong>ملخص الإنجازات:</strong></p>
+                        <ul>
+                            <li>ملعب ربك لكرة القدم.</li>
+                            <li>مشروع كهرباء الدمازين.</li>
+                            <li>مئات المباني في جميع أنحاء السودان.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- بند الإنجاز 4: العقود والمشاريع الرئيسية -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        العقود والمشاريع الرئيسية <span class="en-title"></span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- المحتوى العربي -->
+                        <p>قامت الرخي بحفر مئات الآبار في القرى والمدن ومواقع البترول. ودخلت الشركة في مشروع مشترك مع
+                            شركة النيل الكبرى (1999–2002) لحفر آبار المياه والنفط.</p>
+                        <p>كما شاركت في مشاريع اجتماعية واقتصادية مثل:</p>
+                        <ul>
+                            <li>آبار بنك الزراعة في أمدرمان.</li>
+                            <li>مشروع طريق شريان الشمال.</li>
+                            <li>وزارة الإسكان – ولاية الخرطوم.</li>
+                            <li>مدينة ود مدني الكبرى – الجزيرة.</li>
+                            <li>مشاريع الياقوت والراجح الزراعية.</li>
+                            <li>**إنجازات إضافية:** حفرت الشركة أكثر من 10 آبار في مايوم، بنتو، ميرم، ومناطق أخرى في
+                                جنوب السودان. كما عملت على آبار نفطية بعمق يصل إلى 1700 قدم.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- بند الإنجاز 5: تطوير وصيانة الآبار -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        تطوير وصيانة آبار المياه <span class="en-title"></span>
+                        <span class="accordion-icon">▼</span>
+                    </button>
+                    <div class="accordion-content">
+                        <!-- المحتوى العربي -->
+                        <p>تمتلك الشركة عدة ماكينات لتطوير آبار المياه مجهزة بضواغط ومضخات وماكينات لحام. يتولى مهندسون
+                            ذوو خبرة تنظيف وصيانة الآبار - حتى الآبار التي تم حفرها منذ أكثر من 20 عامًا.</p>
+                        <ul>
+                            <li>تم تنظيف آبار في المقلد وأصبحت منتجة.</li>
+                            <li>تمت استعادة ستة آبار في ولاية الجزيرة (عمرها 20 عامًا) إلى حالة ممتازة.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 5. قسم آخر الأخبار (Recent News) -->
+    <section id="recent-news" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">آخر الأخبار</h2>
+            <div class="news-grid">
+                <!-- خبر 1 -->
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-date">
+                            <span class="day">11</span>
+                            <span class="month item-ar">سبتمبر</span>
+                            <span class="month item-en">SEP</span>
+                        </div>
+                        <div class="news-title-box">
+                            <h4>
+                                <span class="lang-ar">منشور صوري مميز</span>
+                                <span class="lang-en inline-display">Featured Image Post</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            <span class="lang-ar">لوريم إيبسوم دولور سيت أميت، كونسيكتيتور أديبيسشينغ إليت. نوللا
+                                فينيكولا فويجيات بلانديت...</span>
+                            <span class="lang-en inline-display">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit. Nulla vehicula feugiat blandit...</span>
+                        </p>
+                        <a href="#" class="read-more-link">
+                            <span class="lang-ar">قراءة المزيد</span>
+                            <span class="lang-en inline-display">Read More</span>
+                            <i class="fas fa-arrow-left arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- ... خبر 2 ... -->
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-date">
+                            <span class="day">25</span>
+                            <span class="month item-ar">أغسطس</span>
+                            <span class="month item-en">AUG</span>
+                        </div>
+                        <div class="news-title-box">
+                            <h4>
+                                <span class="lang-ar">مشروع جديد في المنطقة الشرقية</span>
+                                <span class="lang-en inline-display">New Project in Eastern Region</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            <span class="lang-ar">أعلنت الشركة عن الانتهاء بنجاح من حفر سلسلة آبار المياه في المشروع
+                                الزراعي.</span>
+                            <span class="lang-en inline-display">The company announced the successful completion of
+                                drilling water wells for the agricultural project.</span>
+                        </p>
+                        <a href="#" class="read-more-link">
+                            <span class="lang-ar">قراءة المزيد</span>
+                            <span class="lang-en inline-display">Read More</span>
+                            <i class="fas fa-arrow-left arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- ... خبر 3 ... -->
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-date">
+                            <span class="day">01</span>
+                            <span class="month item-ar">يوليو</span>
+                            <span class="month item-en">JUL</span>
+                        </div>
+                        <div class="news-title-box">
+                            <h4>
+                                <span class="lang-ar">تحديث أسطول الحفر</span>
+                                <span class="lang-en inline-display">Drilling Fleet Update</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            <span class="lang-ar">نجحنا في تجديد اعتمادات الجودة والسلامة المهنية، مؤكدين التزامنا
+                                بالمعايير.</span>
+                            <span class="lang-en inline-display">We successfully renewed our quality and safety
+                                accreditations, confirming our commitment to standards.</span>
+                        </p>
+                        <a href="#" class="read-more-link">
+                            <span class="lang-ar">قراءة المزيد</span>
+                            <span class="lang-en inline-display">Read More</span>
+                            <i class="fas fa-arrow-left arrow-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. قسم عملائنا (Our Clients) -->
+    <section id="clients" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">عملائنا</h2>
+            <div class="clients-grid">
+                <!-- الشعارات (يجب أن تكون الشعارات كصور PNG أو SVG) -->
+                <img src="images/img8.jpeg" alt="AirAsia Logo" class="client-logo">
+                <img src="images/img8.jpeg" alt="Boymith Logo" class="client-logo">
+                <img src="images/img8.jpeg" alt="EO Logo" class="client-logo">
+                <img src="images/img8.jpeg" alt="Reckitt Benckiser Logo" class="client-logo">
+                <img src="images/img8.jpeg" alt="AirAsia Logo" class="client-logo">
+            </div>
+        </div>
+    </section>
+
+ <!-- 7. قسم الاتصال بنا (Contact Us) - إضافة جديدة -->
+    <section id="contact-form" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-ar">تواصل معنا</span>
+                <span class="lang-en inline-display">Contact Us</span>
+            </h2>
+            
+            <div class="contact-layout-grid">
+                
+                <!-- العمود الأيمن: نموذج الاتصال (Form) -->
+                <div class="contact-form-box">
+                    <h3>
+                        <span class="lang-ar">أرسل لنا رسالة</span>
+                        <span class="lang-en inline-display">Send Us a Message</span>
+                    </h3>
+                    <!-- ملاحظة: هذا النموذج هو هيكل HTML فقط. إرسال الرسائل يتطلب كود Backend (مثل PHP أو Node.js) -->
+                    <form action="#" method="POST" id="main-contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " />
+                            <label for="name">
+                                <span class="lang-ar">الاسم الكامل</span>
+                                <span class="lang-en inline-display">Full Name</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " />
+                            <label for="email">
+                                <span class="lang-ar">البريد الإلكتروني</span>
+                                <span class="lang-en inline-display">Email Address</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " />
+                            <label for="phone">
+                                <span class="lang-ar">رقم الهاتف (اختياري)</span>
+                                <span class="lang-en inline-display">Phone Number (Optional)</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">
+                                <span class="lang-ar">رسالتك</span>
+                                <span class="lang-en inline-display">Your Message</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="primary-button form-submit-btn">
+                            <span class="lang-ar">إرسال الرسالة</span>
+                            <span class="lang-en inline-display">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- العمود الأيسر: بيانات الاتصال والخريطة -->
+                <div class="contact-details-box">
+                    
+                    <h3>
+                        <span class="lang-ar">تفاصيل الاتصال والموقع</span>
+                        <span class="lang-en inline-display">Contact Details & Location</span>
+                    </h3>
+                    
+                    <!-- بيانات الموقع -->
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">العنوان:</span>
+                                <span class="lang-en inline-display">Address:</span>
+                            </strong>
+                            <p>
+                                <span class="lang-ar">حفر الآبار - مضخات - خزانات، الخرطوم - شارع البلدية، مبنى أفريكانا، الطابق الأرضي، شقة رقم 5</span>
+                                <span class="lang-en inline-display">Wells Drilling – Pumps – Tanks, Khartoum – Baladia Street, Africana Building, Ground Floor, Flat No. 5</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- الهواتف - تم التعديل هنا ليتضمن الأرقام الجديدة -->
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">الهواتف:</span>
+                                <span class="lang-en inline-display">Mobile Phone:</span>
+                            </strong>
+                            <p><a href="tel:+249912302653" dir="ltr">+249 912 302 653</a></p>
+                            <p><a href="tel:+249918201681" dir="ltr">+249 918 201 681</a></p>
+                            <p><a href="tel:+24991238309" dir="ltr">+249 912 383 09</a></p>
+                            <p><a href="tel:+249913738487" dir="ltr">+249 913 738 487</a></p>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">البريد الإلكتروني:</span>
+                                <span class="lang-en inline-display">Email:</span>
+                            </strong>
+                            <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                            <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- قسم الخريطة (Map Embed) -->
+                    <div class="map-container">
+                        <!-- هنا يفضل وضع كود التضمين (Embed) من خرائط جوجل لموقعكم -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15336.936608779904!2d32.531206199999995!3d15.5898836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16892e666a0d2f07%3A0x1d5d1c440a3d5f99!2sBaladia%20St%2C%20Khartoum%2C%20Sudan!5e0!3m2!1sen!2seg!4v1684999999999!5m2!1sen!2seg" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+
+           <!-- عمود 1: معلومات الاتصال (تم تبسيطه) -->
+            <div class="footer-col footer-contact">
+                <h4>
+                    <span class="lang-ar">معلومات الاتصال</span>
+                    <span class="lang-en">Contact Info</span>
+                </h4>
+                
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <span class="lang-ar">المقر الرئيسي:</span>
+                        <span class="lang-en">Headquarters:</span>
+                    </strong>
+                    <!-- نستخدم العنوان العام المختصر هنا -->
+                    <p>
+                        <span class="lang-ar">الخرطوم - السودان</span>
+                        <span class="lang-en">Khartoum, Sudan</span>
+                    </p>
+                    <p><a href="#contact-form" class="view-details-link"><span class="lang-ar">عرض التفاصيل الكاملة</span><span class="lang-en">View Full Details</span></a></p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="lang-ar">واتساب (مصر):</span>
+                        <span class="lang-en">WhatsApp (Egypt):</span>
+                    </strong>
+                    <p><a href="https://wa.me/201123494527" dir="ltr">+20 112 349 4527</a></p>
+                </div>
+                
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-envelope"></i>
+                        <span class="lang-ar">البريد الإلكتروني:</span>
+                        <span class="lang-en">Email:</span>
+                    </strong>
+                    <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                </div>
+            </div>
+            
+            <!-- عمود 2: روابط سريعة (سيبقى كما هو) -->
+            <!-- عمود 3: تابعنا (سيبقى كما هو) -->
+            <!-- العمود 2: الروابط السريعة -->
+            <div class="footer-links">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about">عن الشركة</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#projects">مشاريعنا</a></li>
+                    <li><a href="#recent-news">الأخبار</a></li>
+                </ul>
+            </div>
+
+            <!-- العمود 3: تابعنا وتواصل معنا (عمود إضافي) -->
+            <div class="footer-social">
+                <h4>تابعنا وتواصل معنا</h4>
+                <p>تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1CDMniWRSy/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alrakhie.international?igsh=ZGs0N3E0b2NvMWpw" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>&copy; 2025 جميع الحقوق محفوظة لشركة الرخي العالمية المحدودة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ربط ملف الـ JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
