@@ -957,9 +957,34 @@ body.en .contact-block i {
 .copyright {
     text-align: center;
     padding: 20px 0;
-    background: #071622;
+    background: #071622; /* لون أغمق */
     font-size: 0.9rem;
+    color: #bbb; /* اللون العام لحقوق النشر */
 }
+
+.copyright p {
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+.design-credit {
+    margin-top: 10px;
+}
+
+.design-credit .credit-link {
+    color: aliceblue; /* استخدام اللون الأبيض الذي طلبته */
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s;
+    border-bottom: 1px dashed aliceblue; /* إضافة خط تحت النص */
+    padding-bottom: 2px;
+}
+
+.design-credit .credit-link:hover {
+    color: var(--accent-color); /* التلوين بالبرتقالي عند المرور */
+    border-bottom-color: var(--accent-color);
+}
+
 
 /* -------------------- 7. قسم الاتصال (Contact Form) -------------------- */
 #contact-form {
