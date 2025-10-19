@@ -542,77 +542,41 @@ body.en .bio-box {
     margin-left: 10px;
 }
 
-/* -------------------- 3. قسم الشهادات (Certificates) -------------------- */
+/* -------------------- 3. قسم الشهادات (Certificates) - التنسيق الجديد للصور -------------------- */
 
 .certificates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    /* شبكة متجاوبة 3 أعمدة في الديسكتوب، عمودين في المتوسط */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px; 
 }
 
-.certificate-card {
-    background: #fff;
+.certificate-image-item {
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
-    padding: 30px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    border-top: 5px solid var(--accent-color);
-    /* شريط برتقالي للتميز */
-    transition: 0.3s;
+    display: block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* نسبة طول/عرض افتراضية 4:3 لتناسب معظم الشهادات */
+    aspect-ratio: 4/3; 
 }
 
-.certificate-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+.certificate-image-item:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-.cert-icon {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+.certificate-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* لضمان ملء الصورة للحيز دون تشوه */
+    display: block;
+    transition: transform 0.5s ease-in-out;
 }
 
-.cert-icon i {
-    background: var(--bg-light);
-    padding: 20px;
-    border-radius: 50%;
-}
-
-.certificate-card h3 {
-    color: var(--secondary-color);
-    margin-bottom: 15px;
-    font-size: 1.25rem;
-}
-
-.certificate-card p {
-    color: var(--text-light);
-    margin-bottom: 25px;
-    font-size: 0.95rem;
-}
-
-.download-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--accent-color);
-    font-weight: 700;
-    transition: 0.3s;
-    font-size: 1rem;
-}
-
-.download-link:hover {
-    color: var(--primary-color);
-}
-
-.download-link i {
-    margin-left: 10px;
-    /* مسافة للأيقونة في العربية */
-    font-size: 1.1rem;
-}
-
-body.en .download-link i {
-    margin-left: 0;
-    margin-right: 10px;
+.certificate-image-item:hover img {
+    transform: scale(1.05);
 }
 
 /* -------------------- 5. الإنجازات (Accordion) -------------------- */
