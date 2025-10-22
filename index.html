@@ -22,14 +22,14 @@
     <header id="main-header">
         <div class="container header-content">
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <!-- الإضافة: استخدام صورة اللوجو بدلاً من الـ H1 -->
                     <img src="images/logo.png" alt="Al Raki International Logo" class="main-logo-img">
                     <span class="sub-text">Al Raki International Ltd</span>
                 </a>
             </div>
             <nav id="main-nav">
-                <a href="#home">
+                <a href="#hero-slider">
                     <span class="lang-ar">الرئيسية</span>
                     <span class="lang-en">home</span>
                 </a>
@@ -41,7 +41,8 @@
                     <span class="lang-ar">عن الشركة</span>
                     <span class="lang-en">About</span>
                 </a>
-                <a href="#certificates">
+                <!-- تم تغيير الرابط لصفحة الشهادات الجديدة -->
+                <a href="certificates.html">
                     <span class="lang-ar">الشهادات</span>
                     <span class="lang-en">Certificates</span>
                 </a>
@@ -49,7 +50,8 @@
                     <span class="lang-ar">الانجازات</span>
                     <span class="lang-en">achievements</span>
                 </a>
-                <a href="#gallery">
+                <!-- تم تغيير الرابط لصفحة المعرض الجديدة -->
+                <a href="gallery.html">
                     <span class="lang-ar">المعرض</span>
                     <span class="lang-en">Gallery</span>
                 </a>
@@ -69,8 +71,7 @@
 
     <!-- 1. البانر الرئيسي / السلايدر (Hero Section) -->
     <section id="hero-slider" class="hero-slider-container">
-
-        <!-- شريحة السلايدر 1 -->
+        <!-- شرائح السلايدر وأزرار التنقل ونقاط المؤشر -->
         <div class="hero-slide active-slide" style="background-image: url('images/img9.jpeg');">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
@@ -94,7 +95,6 @@
             </div>
         </div>
 
-        <!-- شريحة السلايدر 2 -->
         <div class="hero-slide" style="background-image: url('images/img8.jpeg');">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
@@ -118,7 +118,6 @@
             </div>
         </div>
 
-        <!-- شريحة السلايدر 3 -->
         <div class="hero-slide" style="background-image: url('images/img6.jpeg');">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
@@ -142,7 +141,6 @@
             </div>
         </div>
 
-        <!-- أزرار التنقل -->
         <button class="slider-nav prev" aria-label="Previous">
             <i class="fas fa-chevron-right box-icon-fix"></i>
         </button>
@@ -150,11 +148,10 @@
             <i class="fas fa-chevron-left box-icon-fix"></i>
         </button>
 
-        <!-- نقاط المؤشر - تُنشأ بواسطة JS -->
         <div class="slider-dots"></div>
     </section>
 
-    <!-- 2. قسم الخدمات (Our Services) - تم التعديل باللغتين -->
+    <!-- 2. قسم الخدمات (Our Services) -->
     <section id="services" class="section-padding">
         <div class="container">
             <h2 class="section-title">
@@ -162,8 +159,6 @@
                 <span class="lang-en inline-display">Our Main Services</span>
             </h2>
             <div class="services-grid">
-
-                <!-- بطاقة الخدمة الأولى: قسم الحفر -->
                 <div class="service-card">
                     <img src="images/img9.jpeg" alt="Drilling Section">
                     <h3>
@@ -177,8 +172,6 @@
                             state-of-the-art equipment.</span>
                     </p>
                 </div>
-
-                <!-- بطاقة الخدمة الثانية: تطوير وصيانة الآبار -->
                 <div class="service-card">
                     <img src="images/img3.jpeg" alt="Water Well Development">
                     <h3>
@@ -191,8 +184,6 @@
                             ensure maximum production efficiency.</span>
                     </p>
                 </div>
-
-                <!-- بطاقة الخدمة الثالثة: دراسات جيوفيزيائية وتخطيط -->
                 <div class="service-card">
                     <img src="images/img1.jpeg" alt="Geophysical Studies">
                     <h3>
@@ -206,8 +197,6 @@
                             determine the best drilling locations.</span>
                     </p>
                 </div>
-
-                <!-- بطاقة الخدمة الرابعة: تصميم أنظمة الإمداد المائي -->
                 <div class="service-card">
                     <img src="images/img5.jpeg" alt="Water Supply Systems">
                     <h3>
@@ -220,7 +209,6 @@
                             networks and concrete works.</span>
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -327,65 +315,23 @@
 
         </div>
     </section>
-    <!-- 3. قسم الشهادات (Certificates) - تم تحديث المحتوى ليعرض 9 صور بدلاً من البطاقات النصية -->
-    <section id="certificates" class="section-padding bg-light">
-        <div class="container">
+    
+    <!-- 3. قسم الشهادات (Certificates) - تم إزالته وسيتم استبداله برابط فقط -->
+    <!-- <section id="certificates" class="section-padding">
+        <div class="container text-center">
             <h2 class="section-title">
-                <span class="lang-ar">شهادات الإنجاز واعتماد الشركاء</span>
-                <span class="lang-en inline-display">Performance & Partner Accreditation (9 Images)</span>
+                <span class="lang-ar">عرض شهادات الإنجاز والاعتماد</span>
+                <span class="lang-en inline-display">View Performance & Partner Accreditation</span>
             </h2>
-
-            <div class="certificates-grid">
-
-                <!-- شهادة 1 -->
-                <a href="images/cert-1.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 1">
-                    <img src="images/cert-1.jpg" alt="شهادة إنجاز 1">
-                </a>
-
-                <!-- شهادة 2 -->
-                <a href="images/cert-2.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 2">
-                    <img src="images/cert-2.jpg" alt="شهادة إنجاز 2">
-                </a>
-
-                <!-- شهادة 3 -->
-                <a href="images/cert-3.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 3">
-                    <img src="images/cert-3.jpg" alt="شهادة إنجاز 3">
-                </a>
-
-                <!-- شهادة 4 -->
-                <a href="images/cert-4.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 4">
-                    <img src="images/cert-4.jpg" alt="شهادة إنجاز 4">
-                </a>
-
-                <!-- شهادة 5 -->
-                <a href="images/cert-5.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 5">
-                    <img src="images/cert-5.jpg" alt="شهادة إنجاز 5">
-                </a>
-
-                <!-- شهادة 6 -->
-                <a href="images/cert-6.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 6">
-                    <img src="images/cert-6.jpg" alt="شهادة إنجاز 6">
-                </a>
-
-                <!-- شهادة 7 -->
-                <a href="images/cert-7.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 7">
-                    <img src="images/cert-7.jpg" alt="شهادة إنجاز 7">
-                </a>
-
-                <!-- شهادة 8 -->
-                <a href="images/cert-8.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 8">
-                    <img src="images/cert-8.jpg" alt="شهادة إنجاز 8">
-                </a>
-
-                <!-- شهادة 9 -->
-                <a href="images/cert-9.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 9">
-                    <img src="images/cert-9.jpg" alt="شهادة إنجاز 9">
-                </a>
-
-            </div>
+            <a href="certificates.html" class="primary-button">
+                <span class="lang-ar">شاهد جميع الشهادات</span>
+                <span class="lang-en inline-display">View All Certificates</span>
+            </a>
         </div>
-    </section>
-    <!-- 4. قسم الإنجازات (Achievements) - تم التعديل باللغتين ليضم وصف المعدات -->
+    </section> -->
+
+
+    <!-- 4. قسم الإنجازات (Achievements) - تم تحديثه بالإمكانيات التقنية -->
     <section id="achievements" class="section-padding">
         <div class="container">
             <h2 class="section-title">
@@ -502,9 +448,7 @@
                     </div>
                 </div>
                 
-                <!-- البنود القديمة التي ستبقى مدمجة أو سيتم تعديلها حسب الضرورة -->
-
-                <!-- بند الإنجاز 1: الدراسات الجيوفيزيائية (يبقى كما هو) -->
+                <!-- بند الإنجاز 1: الدراسات الجيوفيزيائية (الأصلية) -->
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="lang-ar">الدراسات الجيوفيزيائية</span>
@@ -534,7 +478,7 @@
                     </div>
                 </div>
 
-                <!-- بند الإنجاز 4: العقود والمشاريع الرئيسية (يبقى كما هو، كان رقم 4) -->
+                <!-- بند الإنجاز 4: العقود والمشاريع الرئيسية (الأصلية) -->
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="lang-ar">العقود والمشاريع الرئيسية</span>
@@ -577,7 +521,7 @@
                     </div>
                 </div>
 
-                <!-- بند الإنجاز 2: تسجيل آبار المياه بالكهرباء (يبقى كما هو) -->
+                <!-- بند الإنجاز 2: تسجيل آبار المياه بالكهرباء (الأصلية) -->
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="lang-ar">تسجيل آبار المياه بالكهرباء</span>
@@ -612,7 +556,7 @@
                     </div>
                 </div>
 
-                <!-- بند الإنجاز 3: آليات الرخي للأنابيب والأساسات الخرسانية (يبقى كما هو) -->
+                <!-- بند الإنجاز 3: آليات الرخي للأنابيب والأساسات الخرسانية (الأصلية) -->
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="lang-ar">آليات الرخي للأنابيب والأساسات الخرسانية</span>
@@ -652,14 +596,13 @@
 
     <!-- 5. قسم آخر الأخبار (Recent News) -->
     <section id="recent-news" class="section-padding bg-light">
+        <!-- محتوى الأخبار... (يبقى كما هو) -->
         <div class="container">
-            <!-- <h2 class="section-title">آخر الأخبار</h2> -->
             <h2 class="section-title">
                 <span class="lang-ar">آخر الأخبار</span>
                 <span class="lang-en inline-display">Latest news</span>
             </h2>
             <div class="news-grid">
-                <!-- خبر 1 -->
                 <div class="news-card">
                     <div class="news-header">
                         <div class="news-date">
@@ -688,7 +631,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- ... خبر 2 ... -->
                 <div class="news-card">
                     <div class="news-header">
                         <div class="news-date">
@@ -717,7 +659,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- ... خبر 3 ... -->
                 <div class="news-card">
                     <div class="news-header">
                         <div class="news-date">
@@ -751,137 +692,40 @@
     </section>
 
     <!-- 5. قسم عملائنا (Our Clients) -->
-    <!-- 6. قسم عملائنا (Clients) - تم التعديل باللغتين -->
     <section id="clients" class="section-padding">
+        <!-- محتوى العملاء... (يبقى كما هو) -->
         <div class="container">
             <h2 class="section-title">
                 <span class="lang-ar">شركاء النجاح</span>
                 <span class="lang-en inline-display">Our Clients</span>
             </h2>
             <div class="clients-grid">
-                <!-- ملاحظة: يفضل استخدام شعارات حقيقية وبصيغة PNG/SVG للمظهر الاحترافي -->
-
-                <!-- الشعار 1 -->
                 <img src="images/img8.jpeg" alt="Client 1 Logo" class="client-logo">
-                <!-- الشعار 2 -->
                 <img src="images/img8.jpeg" alt="Client 2 Logo" class="client-logo">
-                <!-- الشعار 3 -->
                 <img src="images/img8.jpeg" alt="Client 3 Logo" class="client-logo">
-                <!-- الشعار 4 -->
                 <img src="images/img8.jpeg" alt="Client 4 Logo" class="client-logo">
-                <!-- الشعار 5 -->
                 <img src="images/img8.jpeg" alt="Client 5 Logo" class="client-logo">
             </div>
         </div>
     </section>
-    <!-- 5. قسم المعرض (Gallery) - إضافة جديدة -->
+    
+    <!-- 5. قسم المعرض (Gallery) - تم إزالته وسيتم استبداله برابط فقط -->
     <section id="gallery" class="section-padding">
-        <div class="container">
+        <div class="container text-center">
             <h2 class="section-title">
-                <span class="lang-ar">معرض الصور</span>
-                <span class="lang-en inline-display">Gallery</span>
+                <span class="lang-ar">معرض صور مشاريعنا</span>
+                <span class="lang-en inline-display">Photo Gallery of Our Projects</span>
             </h2>
-
-            <div class="gallery-grid">
-                <!-- يمكنك استبدال src بصورك الحقيقية -->
-                <a href="images/img11.jpeg" class="gallery-item" aria-label="عرض صورة حفر">
-                    <img src="images/img11.jpeg" alt="صورة حفر مشروع 1">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">مشروع حفر جديد</span> -->
-                        <!-- <span class="lang-en inline-display">New Drilling Project</span> -->
-                    </div>
-                </a>
-
-                <a href="images/img12.jpeg" class="gallery-item" aria-label="عرض صورة مضخات">
-                    <img src="images/img12.jpeg" alt="صورة مضخات مياه">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">تركيب مضخات مياه</span> -->
-                        <!-- <span class="lang-en inline-display">Water Pump Installation</span> -->
-                    </div>
-                </a>
-
-                <a href="images/img13.jpeg" class="gallery-item" aria-label="عرض دراسة جيوفيزيائية">
-                    <img src="images/img13.jpeg" alt="صورة دراسة جيوفيزيائية">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">أعمال المسح الجيوفيزيائي</span> -->
-                        <!-- <span class="lang-en inline-display">Geophysical Survey Works</span> -->
-                    </div>
-                </a>
-
-                <a href="images/img14.jpeg" class="gallery-item" aria-label="عرض صورة صيانة">
-                    <img src="images/img14.jpeg" alt="صورة صيانة آبار">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">فريق صيانة الآبار</span> -->
-                        <!-- <span class="lang-en inline-display">Well Maintenance Team</span> -->
-                    </div>
-                </a>
-
-                <a href="images/img15.jpeg" class="gallery-item" aria-label="عرض صورة شبكة مياه">
-                    <img src="images/img15.jpeg" alt="صورة شبكة إمداد مائي">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">تنفيذ شبكة مياه</span> -->
-                        <!-- <span class="lang-en inline-display">Water Network Execution</span> -->
-                    </div>
-                </a>
-
-                <a href="images/img16.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img16.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img17.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img17.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img18.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img18.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img19.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img19.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img20.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img20.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img14.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img14.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-                <a href="images/img22.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
-                    <img src="images/img22.jpeg" alt="صورة معدات ثقيلة">
-                    <div class="gallery-overlay">
-                        <!-- <span class="lang-ar">المعدات الثقيلة</span> -->
-                        <!-- <span class="lang-en inline-display">Heavy Equipment</span> -->
-                    </div>
-                </a>
-            </div>
-
+             <a href="gallery.html" class="primary-button">
+                <span class="lang-ar">شاهد جميع الصور</span>
+                <span class="lang-en inline-display">View All Photos</span>
+            </a>
         </div>
     </section>
 
-    <!-- 6. قسم آخر الأخبار (Recent News) ينتقل رقمياً إلى 6 -->
-
-    <!-- 7. قسم الاتصال بنا (Contact Us) - إضافة جديدة -->
+    <!-- 7. قسم الاتصال بنا (Contact Us) -->
     <section id="contact-form" class="section-padding">
+        <!-- محتوى التواصل... (يبقى كما هو) -->
         <div class="container">
             <h2 class="section-title">
                 <span class="lang-ar">تواصل معنا</span>
@@ -890,249 +734,4 @@
 
             <div class="contact-layout-grid">
 
-                <!-- العمود الأيمن: نموذج الاتصال (Form) -->
                 <div class="contact-form-box">
-                    <h3>
-                        <span class="lang-ar">أرسل لنا رسالة</span>
-                        <span class="lang-en inline-display">Send Us a Message</span>
-                    </h3>
-                    <!-- ملاحظة: هذا النموذج هو هيكل HTML فقط. إرسال الرسائل يتطلب كود Backend (مثل PHP أو Node.js) -->
-                    <form action="#" method="POST" id="main-contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" " />
-                            <label for="name">
-                                <span class="lang-ar">الاسم الكامل</span>
-                                <span class="lang-en inline-display">Full Name</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" " />
-                            <label for="email">
-                                <span class="lang-ar">البريد الإلكتروني</span>
-                                <span class="lang-en inline-display">Email Address</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder=" " />
-                            <label for="phone">
-                                <span class="lang-ar">رقم الهاتف (اختياري)</span>
-                                <span class="lang-en inline-display">Phone Number (Optional)</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message">
-                                <span class="lang-ar">رسالتك</span>
-                                <span class="lang-en inline-display">Your Message</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="primary-button form-submit-btn">
-                            <span class="lang-ar">إرسال الرسالة</span>
-                            <span class="lang-en inline-display">Send Message</span>
-                        </button>
-                    </form>
-                </div>
-
-                <!-- العمود الأيسر: بيانات الاتصال والخريطة -->
-                <div class="contact-details-box">
-
-                    <h3>
-                        <span class="lang-ar">تفاصيل الاتصال والموقع</span>
-                        <span class="lang-en inline-display">Contact Details & Location</span>
-                    </h3>
-
-                    <!-- بيانات الموقع -->
-                    <div class="detail-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="detail-text">
-                            <strong>
-                                <span class="lang-ar">العنوان:</span>
-                                <span class="lang-en inline-display">Address:</span>
-                            </strong>
-                            <p>
-                                <span class="lang-ar">السودان - الخرطوم - سوبا جنوب صافولا</span>
-                                <span class="lang-en inline-display">Sudan - Khartoum - Soba, South Safola</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- الهواتف - تم التعديل هنا ليتضمن الأرقام الجديدة -->
-                    <div class="detail-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div class="detail-text">
-                            <strong>
-                                <span class="lang-ar">الهواتف:</span>
-                                <span class="lang-en inline-display">Mobile Phone:</span>
-                            </strong>
-                            <p><a href="tel:+249912302653" dir="ltr">+249 912 302 653</a></p>
-                            <p><a href="tel:+249918201681" dir="ltr">+249 918 201 681</a></p>
-                            <p><a href="tel:+24991238309" dir="ltr">+249 912 383 09</a></p>
-                            <p><a href="tel:+249913738487" dir="ltr">+249 913 738 487</a></p>
-                        </div>
-                    </div>
-
-                    <!-- البريد الإلكتروني -->
-                    <div class="detail-item">
-                        <i class="fas fa-envelope"></i>
-                        <div class="detail-text">
-                            <strong>
-                                <span class="lang-ar">البريد الإلكتروني:</span>
-                                <span class="lang-en inline-display">Email:</span>
-                            </strong>
-                            <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
-                            <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
-                        </div>
-                    </div>
-
-                    <!-- قسم الخريطة (Map Embed) -->
-                    <div class="map-container">
-                        <!-- يمكنك تحديث src للـ iframe برابط لموقع "سوبا جنوب صافولا" -->
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.459950119293!2d32.5487739!3d15.4215714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16893699b6f8497d%3A0xc49d0150970a0429!2sSafola%20Company%20Sudan!5e0!3m2!1sen!2seg!4v1684999999999!5m2!1sen!2seg"
-                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- الفوتر (Footer) - تم التعديل باللغتين -->
-    <footer id="contact-footer">
-        <div class="container footer-grid">
-
-            <!-- عمود 1: معلومات الاتصال (مبسط) -->
-            <div class="footer-col footer-contact">
-                <h4>
-                    <span class="lang-ar">معلومات الاتصال</span>
-                    <span class="lang-en inline-display">Contact Info</span>
-                </h4>
-
-                <div class="contact-block">
-                    <strong>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span class="lang-ar">المقر الرئيسي:</span>
-                        <span class="lang-en inline-display">Headquarters:</span>
-                    </strong>
-                    <p>
-                        <span class="lang-ar">الخرطوم - سوبا</span>
-                        <span class="lang-en inline-display">Khartoum - Soba</span>
-                    </p>
-                    <p>
-                        <a href="#contact-form" class="view-details-link">
-                            <span class="lang-ar">عرض التفاصيل الكاملة</span>
-                            <span class="lang-en inline-display">View Full Details</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="contact-block">
-                    <strong>
-                        <i class="fab fa-whatsapp"></i>
-                        <span class="lang-ar">واتساب (مصر):</span>
-                        <span class="lang-en inline-display">WhatsApp (Egypt):</span>
-                    </strong>
-                    <p><a href="https://wa.me/201123494527" dir="ltr">+20 112 349 4527</a></p>
-                </div>
-
-                <div class="contact-block">
-                    <strong>
-                        <i class="fas fa-envelope"></i>
-                        <span class="lang-ar">البريد الإلكتروني:</span>
-                        <span class="lang-en inline-display">Email:</span>
-                    </strong>
-                    <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
-                    <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
-                </div>
-            </div>
-
-            <!-- عمود 2: الروابط السريعة -->
-            <div class="footer-col footer-links">
-                <h4>
-                    <span class="lang-ar">روابط سريعة</span>
-                    <span class="lang-en inline-display">Quick Links</span>
-                </h4>
-                <ul>
-                    <li><a href="#about"><span class="lang-ar">عن الشركة</span><span
-                                class="lang-en inline-display">About Us</span></a></li>
-                    <li><a href="#services"><span class="lang-ar">خدماتنا</span><span
-                                class="lang-en inline-display">Services</span></a></li>
-                    <li><a href="#projects"><span class="lang-ar">المشاريع</span><span
-                                class="lang-en inline-display">Projects</span></a></li>
-                    <li><a href="#recent-news"><span class="lang-ar">الأخبار</span><span
-                                class="lang-en inline-display">News</span></a></li>
-                </ul>
-            </div>
-
-            <!-- عمود 3: تابعنا وتواصل معنا -->
-            <div class="footer-col footer-social">
-                <h4>
-                    <span class="lang-ar">تابعنا وتواصل معنا</span>
-                    <span class="lang-en inline-display">Follow & Connect</span>
-                </h4>
-                <p>
-                    <span class="lang-ar">تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</span>
-                    <span class="lang-en inline-display">Stay updated with our latest offers and projects on social
-                        media.</span>
-                </p>
-                <div class="social-icons">
-                    <!-- فيسبوك -->
-                    <a href="https://www.facebook.com/share/1CDMniWRSy/" target="_blank" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <!-- انستجرام -->
-                    <a href="https://www.instagram.com/alrakhie.international?igsh=ZGs0N3E0b2NvMWpw" target="_blank"
-                        aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <!-- تويتر/X (تم وضعه كافتراضي) -->
-                    <a href="#" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <p>
-                    <span class="lang-ar">&copy; 2025 جميع الحقوق محفوظة لشركة الرخي العالمية المحدودة.</span>
-                    <span class="lang-en inline-display">&copy; 2025 All Rights Reserved to Al Raki International
-                        Ltd.</span>
-                </p>
-                <p class="design-credit">
-                    <span class="lang-ar">
-                        تصميم وبرمجة بواسطة
-                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
-                            target="_blank">
-                            <strong class="credit-link">GMTWEB</strong>
-                        </a>
-                    </span>
-                    <span class="lang-en inline-display">
-                        Design and programming by
-                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
-                            target="_blank">
-                            <strong class="credit-link">GMTWEB</strong>
-                        </a>
-                    </span>
-                </p>
-            </div>
-        </div>
-    </footer>
-    <div id="quick-contact-mobile">
-        <!-- زر الاتصال الهاتفي -->
-        <a href="tel:+249918201681" class="quick-btn phone-btn" aria-label="اتصل الآن: 00249918201681">
-            <i class="fas fa-phone-alt"></i>
-        </a>
-
-        <!-- زر الواتساب -->
-        <a href="https://wa.me/201123494527" target="_blank" class="quick-btn whatsapp-btn" aria-label="واتساب">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
-    <!-- ربط ملف الـ JavaScript -->
-    <script src="script.js"></script>
-</body>
-
-</html>

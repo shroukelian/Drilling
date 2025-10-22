@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرخي العالمية - الشهادات</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- تنسيقات خاصة بالصفحة -->
+    <style>
+        /* لضمان عرض الجزء الرئيسي أسفل الهيدر مباشرة */
+        #certificates-page-content {
+            padding-top: 100px;
+        }
+
+        /* تنسيق الشبكة لصفحة الشهادات */
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .certificate-image-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+            aspect-ratio: 4/3; 
+        }
+
+        .certificate-image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .certificate-image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .certificate-image-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- الهيدر وشريط التنقل (يجب أن تكون نسخة طبق الأصل من index.html) -->
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Al Raki International Logo" class="main-logo-img">
+                    <span class="sub-text">Al Raki International Ltd</span>
+                </a>
+            </div>
+            <nav id="main-nav">
+                <a href="index.html#hero-slider">
+                    <span class="lang-ar">الرئيسية</span>
+                    <span class="lang-en">home</span>
+                </a>
+                <a href="index.html#services">
+                    <span class="lang-ar">خدماتنا</span>
+                    <span class="lang-en">services</span>
+                </a>
+                <a href="index.html#about">
+                    <span class="lang-ar">عن الشركة</span>
+                    <span class="lang-en">About</span>
+                </a>
+                <a href="certificates.html">
+                    <span class="lang-ar">الشهادات</span>
+                    <span class="lang-en">Certificates</span>
+                </a>
+                <a href="index.html#achievements">
+                    <span class="lang-ar">الانجازات</span>
+                    <span class="lang-en">achievements</span>
+                </a>
+                <a href="gallery.html">
+                    <span class="lang-ar">المعرض</span>
+                    <span class="lang-en">Gallery</span>
+                </a>
+                <a href="index.html#contact-form" class="cta-button">
+                    <span class="lang-ar">تواصل معنا</span>
+                    <span class="lang-en">contact Us</span>
+                </a>
+                <div class="language-switcher">
+                    <button id="lang-toggle" data-lang="en">English</button>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- محتوى الصفحة الجديد (بديل لقسم الشهادات) -->
+    <section id="certificates-page-content" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-ar">شهادات الإنجاز واعتماد الشركاء (9 صور)</span>
+                <span class="lang-en inline-display">Performance & Partner Accreditation (9 Images)</span>
+            </h2>
+
+            <div class="certificates-grid">
+
+                <!-- شهادة 1 -->
+                <a href="images/cert-1.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 1">
+                    <img src="images/cert-1.jpg" alt="شهادة إنجاز 1">
+                </a>
+
+                <!-- شهادة 2 -->
+                <a href="images/cert-2.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 2">
+                    <img src="images/cert-2.jpg" alt="شهادة إنجاز 2">
+                </a>
+
+                <!-- شهادة 3 -->
+                <a href="images/cert-3.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 3">
+                    <img src="images/cert-3.jpg" alt="شهادة إنجاز 3">
+                </a>
+
+                <!-- شهادة 4 -->
+                <a href="images/cert-4.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 4">
+                    <img src="images/cert-4.jpg" alt="شهادة إنجاز 4">
+                </a>
+
+                <!-- شهادة 5 -->
+                <a href="images/cert-5.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 5">
+                    <img src="images/cert-5.jpg" alt="شهادة إنجاز 5">
+                </a>
+
+                <!-- شهادة 6 -->
+                <a href="images/cert-6.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 6">
+                    <img src="images/cert-6.jpg" alt="شهادة إنجاز 6">
+                </a>
+
+                <!-- شهادة 7 -->
+                <a href="images/cert-7.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 7">
+                    <img src="images/cert-7.jpg" alt="شهادة إنجاز 7">
+                </a>
+
+                <!-- شهادة 8 -->
+                <a href="images/cert-8.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 8">
+                    <img src="images/cert-8.jpg" alt="شهادة إنجاز 8">
+                </a>
+
+                <!-- شهادة 9 -->
+                <a href="images/cert-9.jpg" target="_blank" class="certificate-image-item" aria-label="عرض الشهادة 9">
+                    <img src="images/cert-9.jpg" alt="شهادة إنجاز 9">
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- الفوتر (Footer) - يبقى كما هو ولكن مع تحديث الروابط -->
+    <footer id="contact-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-col footer-contact">
+                <h4>
+                    <span class="lang-ar">معلومات الاتصال</span>
+                    <span class="lang-en inline-display">Contact Info</span>
+                </h4>
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-ar">المقر الرئيسي:</span>
+                        <span class="lang-en inline-display">Headquarters:</span>
+                    </strong>
+                    <p>
+                        <span class="lang-ar">الخرطوم - سوبا</span>
+                        <span class="lang-en inline-display">Khartoum - Soba</span>
+                    </p>
+                    <p>
+                        <a href="index.html#contact-form" class="view-details-link">
+                            <span class="lang-ar">عرض التفاصيل الكاملة</span>
+                            <span class="lang-en inline-display">View Full Details</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="lang-ar">واتساب (مصر):</span>
+                        <span class="lang-en inline-display">WhatsApp (Egypt):</span>
+                    </strong>
+                    <p><a href="https://wa.me/201123494527" dir="ltr">+20 112 349 4527</a></p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-envelope"></i>
+                        <span class="lang-ar">البريد الإلكتروني:</span>
+                        <span class="lang-en inline-display">Email:</span>
+                    </strong>
+                    <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                    <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>
+                    <span class="lang-ar">روابط سريعة</span>
+                    <span class="lang-en inline-display">Quick Links</span>
+                </h4>
+                <ul>
+                    <li><a href="index.html#about"><span class="lang-ar">عن الشركة</span><span
+                                class="lang-en inline-display">About Us</span></a></li>
+                    <li><a href="index.html#services"><span class="lang-ar">خدماتنا</span><span
+                                class="lang-en inline-display">Services</span></a></li>
+                    <li><a href="certificates.html"><span class="lang-ar">الشهادات</span><span
+                                class="lang-en inline-display">Certificates</span></a></li>
+                    <li><a href="gallery.html"><span class="lang-ar">المعرض</span><span
+                                class="lang-en inline-display">Gallery</span></a></li>
+                    <li><a href="index.html#recent-news"><span class="lang-ar">الأخبار</span><span
+                                class="lang-en inline-display">News</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-social">
+                <h4>
+                    <span class="lang-ar">تابعنا وتواصل معنا</span>
+                    <span class="lang-en inline-display">Follow & Connect</span>
+                </h4>
+                <p>
+                    <span class="lang-ar">تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</span>
+                    <span class="lang-en inline-display">Stay updated with our latest offers and projects on social
+                        media.</span>
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1CDMniWRSy/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alrakhie.international?igsh=ZGs0N3E0b2NvMWpw" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    <span class="lang-ar">&copy; 2025 جميع الحقوق محفوظة لشركة الرخي العالمية المحدودة.</span>
+                    <span class="lang-en inline-display">&copy; 2025 All Rights Reserved to Al Raki International
+                        Ltd.</span>
+                </p>
+                <p class="design-credit">
+                    <span class="lang-ar">
+                        تصميم وبرمجة بواسطة
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                    <span class="lang-en inline-display">
+                        Design and programming by
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="quick-contact-mobile">
+        <a href="tel:+249918201681" class="quick-btn phone-btn" aria-label="اتصل الآن: 00249918201681">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <a href="https://wa.me/201123494527" target="_blank" class="quick-btn whatsapp-btn" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- يجب استخدام ملف script.js نفسه -->
+    <script src="script.js"></script> 
+</body>
+
+</html>
