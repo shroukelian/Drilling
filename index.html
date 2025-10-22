@@ -710,7 +710,7 @@
     </section>
     
     <!-- 5. قسم المعرض (Gallery) - تم إزالته وسيتم استبداله برابط فقط -->
-    <section id="gallery" class="section-padding">
+    <!-- <section id="gallery" class="section-padding">
         <div class="container text-center">
             <h2 class="section-title">
                 <span class="lang-ar">معرض صور مشاريعنا</span>
@@ -721,11 +721,9 @@
                 <span class="lang-en inline-display">View All Photos</span>
             </a>
         </div>
-    </section>
+    </section> -->
 
-    <!-- 7. قسم الاتصال بنا (Contact Us) -->
     <section id="contact-form" class="section-padding">
-        <!-- محتوى التواصل... (يبقى كما هو) -->
         <div class="container">
             <h2 class="section-title">
                 <span class="lang-ar">تواصل معنا</span>
@@ -734,4 +732,248 @@
 
             <div class="contact-layout-grid">
 
+                <!-- العمود الأيمن: نموذج الاتصال (Form) -->
                 <div class="contact-form-box">
+                    <h3>
+                        <span class="lang-ar">أرسل لنا رسالة</span>
+                        <span class="lang-en inline-display">Send Us a Message</span>
+                    </h3>
+                    <!-- ملاحظة: هذا النموذج هو هيكل HTML فقط. إرسال الرسائل يتطلب كود Backend (مثل PHP أو Node.js) -->
+                    <form action="#" method="POST" id="main-contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " />
+                            <label for="name">
+                                <span class="lang-ar">الاسم الكامل</span>
+                                <span class="lang-en inline-display">Full Name</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " />
+                            <label for="email">
+                                <span class="lang-ar">البريد الإلكتروني</span>
+                                <span class="lang-en inline-display">Email Address</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " />
+                            <label for="phone">
+                                <span class="lang-ar">رقم الهاتف (اختياري)</span>
+                                <span class="lang-en inline-display">Phone Number (Optional)</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">
+                                <span class="lang-ar">رسالتك</span>
+                                <span class="lang-en inline-display">Your Message</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="primary-button form-submit-btn">
+                            <span class="lang-ar">إرسال الرسالة</span>
+                            <span class="lang-en inline-display">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- العمود الأيسر: بيانات الاتصال والخريطة -->
+                <div class="contact-details-box">
+
+                    <h3>
+                        <span class="lang-ar">تفاصيل الاتصال والموقع</span>
+                        <span class="lang-en inline-display">Contact Details & Location</span>
+                    </h3>
+
+                    <!-- بيانات الموقع -->
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">العنوان:</span>
+                                <span class="lang-en inline-display">Address:</span>
+                            </strong>
+                            <p>
+                                <span class="lang-ar">السودان - الخرطوم - سوبا جنوب صافولا</span>
+                                <span class="lang-en inline-display">Sudan - Khartoum - Soba, South Safola</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- الهواتف - تم التعديل هنا ليتضمن الأرقام الجديدة -->
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">الهواتف:</span>
+                                <span class="lang-en inline-display">Mobile Phone:</span>
+                            </strong>
+                            <p><a href="tel:+249912302653" dir="ltr">+249 912 302 653</a></p>
+                            <p><a href="tel:+249918201681" dir="ltr">+249 918 201 681</a></p>
+                            <p><a href="tel:+24991238309" dir="ltr">+249 912 383 09</a></p>
+                            <p><a href="tel:+249913738487" dir="ltr">+249 913 738 487</a></p>
+                        </div>
+                    </div>
+
+                    <!-- البريد الإلكتروني -->
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">البريد الإلكتروني:</span>
+                                <span class="lang-en inline-display">Email:</span>
+                            </strong>
+                            <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                            <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- قسم الخريطة (Map Embed) -->
+                    <div class="map-container">
+                        <!-- يمكنك تحديث src للـ iframe برابط لموقع "سوبا جنوب صافولا" -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.459950119293!2d32.5487739!3d15.4215714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16893699b6f8497d%3A0xc49d0150970a0429!2sSafola%20Company%20Sudan!5e0!3m2!1sen!2seg!4v1684999999999!5m2!1sen!2seg"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر (Footer) - تم التعديل باللغتين -->
+    <footer id="contact-footer">
+        <div class="container footer-grid">
+
+            <!-- عمود 1: معلومات الاتصال (مبسط) -->
+            <div class="footer-col footer-contact">
+                <h4>
+                    <span class="lang-ar">معلومات الاتصال</span>
+                    <span class="lang-en inline-display">Contact Info</span>
+                </h4>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-ar">المقر الرئيسي:</span>
+                        <span class="lang-en inline-display">Headquarters:</span>
+                    </strong>
+                    <p>
+                        <span class="lang-ar">الخرطوم - سوبا</span>
+                        <span class="lang-en inline-display">Khartoum - Soba</span>
+                    </p>
+                    <p>
+                        <a href="#contact-form" class="view-details-link">
+                            <span class="lang-ar">عرض التفاصيل الكاملة</span>
+                            <span class="lang-en inline-display">View Full Details</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="lang-ar">واتساب (مصر):</span>
+                        <span class="lang-en inline-display">WhatsApp (Egypt):</span>
+                    </strong>
+                    <p><a href="https://wa.me/201123494527" dir="ltr">+20 112 349 4527</a></p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-envelope"></i>
+                        <span class="lang-ar">البريد الإلكتروني:</span>
+                        <span class="lang-en inline-display">Email:</span>
+                    </strong>
+                    <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                    <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                </div>
+            </div>
+
+            <!-- عمود 2: الروابط السريعة -->
+            <div class="footer-col footer-links">
+                <h4>
+                    <span class="lang-ar">روابط سريعة</span>
+                    <span class="lang-en inline-display">Quick Links</span>
+                </h4>
+                <ul>
+                    <li><a href="#about"><span class="lang-ar">عن الشركة</span><span
+                                class="lang-en inline-display">About Us</span></a></li>
+                    <li><a href="#services"><span class="lang-ar">خدماتنا</span><span
+                                class="lang-en inline-display">Services</span></a></li>
+                    <li><a href="#projects"><span class="lang-ar">المشاريع</span><span
+                                class="lang-en inline-display">Projects</span></a></li>
+                    <li><a href="#recent-news"><span class="lang-ar">الأخبار</span><span
+                                class="lang-en inline-display">News</span></a></li>
+                </ul>
+            </div>
+
+            <!-- عمود 3: تابعنا وتواصل معنا -->
+            <div class="footer-col footer-social">
+                <h4>
+                    <span class="lang-ar">تابعنا وتواصل معنا</span>
+                    <span class="lang-en inline-display">Follow & Connect</span>
+                </h4>
+                <p>
+                    <span class="lang-ar">تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</span>
+                    <span class="lang-en inline-display">Stay updated with our latest offers and projects on social
+                        media.</span>
+                </p>
+                <div class="social-icons">
+                    <!-- فيسبوك -->
+                    <a href="https://www.facebook.com/share/1CDMniWRSy/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- انستجرام -->
+                    <a href="https://www.instagram.com/alrakhie.international?igsh=ZGs0N3E0b2NvMWpw" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- تويتر/X (تم وضعه كافتراضي) -->
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    <span class="lang-ar">&copy; 2025 جميع الحقوق محفوظة لشركة الرخي العالمية المحدودة.</span>
+                    <span class="lang-en inline-display">&copy; 2025 All Rights Reserved to Al Raki International
+                        Ltd.</span>
+                </p>
+                <p class="design-credit">
+                    <span class="lang-ar">
+                        تصميم وبرمجة بواسطة
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                    <span class="lang-en inline-display">
+                        Design and programming by
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="quick-contact-mobile">
+        <!-- زر الاتصال الهاتفي -->
+        <a href="tel:+249918201681" class="quick-btn phone-btn" aria-label="اتصل الآن: 00249918201681">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <!-- زر الواتساب -->
+        <a href="https://wa.me/201123494527" target="_blank" class="quick-btn whatsapp-btn" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- ربط ملف الـ JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
