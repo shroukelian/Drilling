@@ -108,7 +108,7 @@
                     <span class="lang-ar">المعرض</span>
                     <span class="lang-en">Gallery</span>
                 </a>
-                <a href="contact-form.html" class="cta-button">
+                <a href="index.html#contact-form" class="cta-button">
                     <span class="lang-ar">تواصل معنا</span>
                     <span class="lang-en">contact Us</span>
                 </a>
@@ -122,62 +122,109 @@
         </div>
     </header>
 
-     <section id="services" class="section-padding">
+     <section id="contact-form" class="section-padding">
         <div class="container">
             <h2 class="section-title">
-                <span class="lang-ar">خدماتنا الرئيسية</span>
-                <span class="lang-en inline-display">Our Main Services</span>
+                <span class="lang-ar">تواصل معنا</span>
+                <span class="lang-en inline-display">Contact Us</span>
             </h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="images/img9.jpeg" alt="Drilling Section">
+
+            <div class="contact-layout-grid">
+
+                <div class="contact-form-box">
                     <h3>
-                        <span class="lang-ar">قسم الحفر</span>
-                        <span class="lang-en inline-display">Drilling Section</span>
+                        <span class="lang-ar">أرسل لنا رسالة</span>
+                        <span class="lang-en inline-display">Send Us a Message</span>
                     </h3>
-                    <p>
-                        <span class="lang-ar">أعمال الحفر العميقة والسطحية لآبار المياه والنفط باستخدام أحدث
-                            المعدات.</span>
-                        <span class="lang-en inline-display">Deep and shallow drilling for water and oil wells using
-                            state-of-the-art equipment.</span>
-                    </p>
+                    <form action="#" method="POST" id="main-contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" " />
+                            <label for="name">
+                                <span class="lang-ar">الاسم الكامل</span>
+                                <span class="lang-en inline-display">Full Name</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" " />
+                            <label for="email">
+                                <span class="lang-ar">البريد الإلكتروني</span>
+                                <span class="lang-en inline-display">Email Address</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" " />
+                            <label for="phone">
+                                <span class="lang-ar">رقم الهاتف (اختياري)</span>
+                                <span class="lang-en inline-display">Phone Number (Optional)</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">
+                                <span class="lang-ar">رسالتك</span>
+                                <span class="lang-en inline-display">Your Message</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="primary-button form-submit-btn">
+                            <span class="lang-ar">إرسال الرسالة</span>
+                            <span class="lang-en inline-display">Send Message</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="service-card">
-                    <img src="images/img3.jpeg" alt="Water Well Development">
+
+                <div class="contact-details-box">
+
                     <h3>
-                        <span class="lang-ar">تطوير وصيانة الآبار</span>
-                        <span class="lang-en inline-display">Well Development & Maintenance</span>
+                        <span class="lang-ar">تفاصيل الاتصال والموقع</span>
+                        <span class="lang-en inline-display">Contact Details & Location</span>
                     </h3>
-                    <p>
-                        <span class="lang-ar">صيانة وتطوير وتنظيف آبار المياه لضمان أقصى كفاءة إنتاجية.</span>
-                        <span class="lang-en inline-display">Maintenance, development, and cleaning of water wells to
-                            ensure maximum production efficiency.</span>
-                    </p>
-                </div>
-                <div class="service-card">
-                    <img src="images/img1.jpeg" alt="Geophysical Studies">
-                    <h3>
-                        <span class="lang-ar">دراسات جيوفيزيائية وتخطيط</span>
-                        <span class="lang-en inline-display">Geophysical Studies & Planning</span>
-                    </h3>
-                    <p>
-                        <span class="lang-ar">مسح شامل للمواقع وتحليل البيانات الجيولوجية لتحديد أفضل مواقع
-                            الحفر.</span>
-                        <span class="lang-en inline-display">Comprehensive site surveys and geological data analysis to
-                            determine the best drilling locations.</span>
-                    </p>
-                </div>
-                <div class="service-card">
-                    <img src="images/img5.jpeg" alt="Water Supply Systems">
-                    <h3>
-                        <span class="lang-ar">تصميم أنظمة الإمداد المائي</span>
-                        <span class="lang-en inline-display">Designing Water Supply Systems</span>
-                    </h3>
-                    <p>
-                        <span class="lang-ar">تصميم وتنفيذ شبكات إمداد المياه المتكاملة والأعمال الخرسانية.</span>
-                        <span class="lang-en inline-display">Design and implementation of integrated water supply
-                            networks and concrete works.</span>
-                    </p>
+
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">العنوان:</span>
+                                <span class="lang-en inline-display">Address:</span>
+                            </strong>
+                            <p>
+                                <span class="lang-ar">السودان - الخرطوم - سوبا جنوب صافولا</span>
+                                <span class="lang-en inline-display">Sudan - Khartoum - Soba, South Safola</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">الهواتف:</span>
+                                <span class="lang-en inline-display">Mobile Phone:</span>
+                            </strong>
+                            <p><a href="tel:+249912302653" dir="ltr">+249 912 302 653</a></p>
+                            <p><a href="tel:+249918201681" dir="ltr">+249 918 201 681</a></p>
+                            <p><a href="tel:+249912383095" dir="ltr">+249 912 383 095</a></p>
+                            <p><a href="tel:+249913738487" dir="ltr">+249 913 738 487</a></p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="detail-text">
+                            <strong>
+                                <span class="lang-ar">البريد الإلكتروني:</span>
+                                <span class="lang-en inline-display">Email:</span>
+                            </strong>
+                            <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                            <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.459950119293!2d32.5487739!3d15.4215714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x16893699b6f8497d%3A0xc49d0150970a0429!2sSafola%20Company%20Sudan!5e0!3m2!1sen!2seg!4v1684999999999!5m2!1sen!2seg"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+
                 </div>
             </div>
         </div>
