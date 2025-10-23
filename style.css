@@ -1,4 +1,3 @@
-/* -------------------- 0. متغيرات وإعدادات عامة -------------------- */
 :root {
     /* لوحة الألوان */
     --primary-color: #00334e;
@@ -56,7 +55,9 @@ body {
     background-color: #fff;
     overflow-x: hidden;
 }
-
+img{
+    object-fit: cover;
+}
 /* --- منطق تعدد اللغات (Bilingual Logic) --- */
 
 /* الحالة الافتراضية (عربي RTL) */
@@ -184,20 +185,39 @@ button {
     padding: 15px 20px;
 }
 
-.main-logo-img {
-    max-height: 40px;
-    /* تحديد ارتفاع الصورة */
-    width: auto;
-    margin-bottom: 5px;
-    /* رفع النص الفرعي قليلاً */
-}
-
 .logo a {
     text-decoration: none;
     line-height: 1.2;
     display: block;
+    position: relative; /* لجعل الصور تتوضع بناءً عليه */
 }
 
+.main-logo-img {
+    max-height: 40px;
+    width: auto;
+    margin-bottom: 5px;
+    /* الإضافة الجديدة: وضع اللوجوهات فوق بعضها */
+    position: absolute;
+    top: 0;
+    /* في العربية، نضعه على اليمين لتبدأ الصورة والنص من هناك */
+    right: 0; 
+}
+
+body.en .main-logo-img {
+    /* في الإنجليزية، نضعه على اليسار */
+    right: auto;
+    left: 0; 
+}
+
+/* تعديل مهم: إزالة margin-bottom من الصورة الأساسية (main-logo-img)
+   ووضعها على النص التكميلي (sub-text) لضمان أن موقعه سليم */
+.logo .sub-text {
+    display: block;
+    padding-top: 45px; /* مسافة كافية أسفل اللوجو (40px + 5px) */
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
 
 #main-nav {
     display: flex;

@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
-    // ==========================================
-    // 1. نظام تبديل اللغة (Language Switcher)
-    // ==========================================
     const langToggleBtn = document.getElementById('lang-toggle');
     const body = document.body;
     const htmlTag = document.documentElement;
@@ -12,37 +8,29 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentLang = this.getAttribute('data-lang');
 
             if (currentLang === 'en') {
-                // ----- التحويل إلى الإنجليزية -----
                 body.classList.add('en');
                 htmlTag.setAttribute('lang', 'en');
                 htmlTag.setAttribute('dir', 'ltr');
-                // تحديث الزر للعودة للعربية
                 this.setAttribute('data-lang', 'ar');
                 this.textContent = 'العربية';
             } else {
-                // ----- التحويل إلى العربية -----
                 body.classList.remove('en');
                 htmlTag.setAttribute('lang', 'ar');
                 htmlTag.setAttribute('dir', 'rtl');
-                // تحديث الزر للذهاب للإنجليزية
                 this.setAttribute('data-lang', 'en');
                 this.textContent = 'English';
             }
         });
     }
 
-    // ==========================================
-    // 2. قائمة الجوال (Mobile Menu)
-    // ==========================================
+   
     const menuToggle = document.querySelector('.menu-toggle');
     const mainNav = document.getElementById('main-nav');
     const navLinks = mainNav.querySelectorAll('a');
 
     if (menuToggle && mainNav) {
-        // فتح/إغلاق القائمة
         menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
-            // تغيير أيقونة الهامبرغر إلى X (اختياري)
             const icon = menuToggle.querySelector('i');
             if (mainNav.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -53,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // إغلاق القائمة عند النقر على أي رابط
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mainNav.classList.remove('active');
@@ -63,9 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ==========================================
-    // 3. السلايدر الرئيسي (Hero Slider)
-    // ==========================================
+
     const slides = document.querySelectorAll('.hero-slide');
     const dotsContainer = document.querySelector('.slider-dots');
     const nextBtn = document.querySelector('.slider-nav.next');
@@ -75,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let currentSlide = 0;
         let slideInterval;
 
-        // إنشاء نقاط المؤشر
         slides.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.classList.add('dot');
@@ -99,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function() {
         function nextSlide() { goToSlide(currentSlide + 1); }
         function prevSlide() { goToSlide(currentSlide - 1); }
 
-        // ربط الأزرار
         if (nextBtn) nextBtn.addEventListener('click', () => {
             nextSlide(); resetTimer();
         });
@@ -107,9 +90,8 @@ document.addEventListener('DOMContentLoaded', function() {
             prevSlide(); resetTimer();
         });
 
-        // التشغيل التلقائي
         function startTimer() {
-            slideInterval = setInterval(nextSlide, 5000); // كل 5 ثواني
+            slideInterval = setInterval(nextSlide, 5000); 
         }
         function resetTimer() {
             clearInterval(slideInterval);
@@ -119,9 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
         startTimer();
     }
 
-    // ==========================================
-    // 4. الأكورديون (الإنجازات)
-    // ==========================================
     const accHeaders = document.querySelectorAll('.accordion-header');
 
     accHeaders.forEach(header => {
@@ -129,16 +108,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const content = header.nextElementSibling;
             const isActive = header.classList.contains('active');
 
-            // إغلاق جميع العناصر الأخرى
             accHeaders.forEach(otherHeader => {
                 otherHeader.classList.remove('active');
                 otherHeader.nextElementSibling.style.maxHeight = null;
             });
 
-            // إذا لم يكن العنصر مفتوحاً، افتحه
             if (!isActive) {
                 header.classList.add('active');
-                // تعيين الارتفاع ديناميكياً للمحتوى الداخلي
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         });

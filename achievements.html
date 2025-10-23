@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرخي العالمية - معرض الصور</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- تنسيقات خاصة بالصفحة -->
+    <style>
+        /* لضمان عرض الجزء الرئيسي أسفل الهيدر مباشرة */
+        #gallery-page-content {
+            padding-top: 100px;
+        }
+
+        /* تنسيق الشبكة لصفحة المعرض (مطابق لتنسيق Gallery في CSS الأصلي) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 51, 78, 0.7);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo2-removebg-preview.png" class="main-logo-img lang-ar">
+                    <img src="images/logo_en-removebg-preview.png" alt="Al Raki International Logo"
+                        class="main-logo-img lang-en inline-display">
+
+                    <!-- <span class="sub-text">Al Raki International Ltd</span> -->
+                </a>
+            </div>
+            <nav id="main-nav">
+                <a href="index.html#hero-slider">
+                    <span class="lang-ar">الرئيسية</span>
+                    <span class="lang-en">home</span>
+                </a>
+               
+                <a href="index.html#about">
+                    <span class="lang-ar">عن الشركة</span>
+                    <span class="lang-en">About</span>
+                </a>
+                 <a href="index.html#services">
+                    <span class="lang-ar">خدماتنا</span>
+                    <span class="lang-en">services</span>
+                </a>
+                <a href="certificates.html">
+                    <span class="lang-ar">الشهادات</span>
+                    <span class="lang-en">Certificates</span>
+                </a>
+                <a href="index.html#achievements">
+                    <span class="lang-ar">الانجازات</span>
+                    <span class="lang-en">achievements</span>
+                </a>
+                <a href="gallery.html">
+                    <span class="lang-ar">المعرض</span>
+                    <span class="lang-en">Gallery</span>
+                </a>
+                <a href="index.html#contact-form" class="cta-button">
+                    <span class="lang-ar">تواصل معنا</span>
+                    <span class="lang-en">contact Us</span>
+                </a>
+                <div class="language-switcher">
+                    <button id="lang-toggle" data-lang="en">English</button>
+                </div>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section id="achievements" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-ar">إمكانياتنا وإنجازاتنا</span>
+                <span class="lang-en inline-display">Our Capabilities & Key Achievements</span>
+            </h2>
+
+            <div class="achievements-accordion">
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">أدوات وماكينات الحفر (Rotary & Hammer)</span>
+                        <span class="lang-en inline-display">Drilling Tools and Machines (Rotary & Hammer)</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p><strong>تمتلك الشركة مجموعة من حفارات آبار المياه تعمل في جميع أنحاء السودان، وتستخدم
+                                        التقنيات الحديثة (Gardener Denver). تشمل مجموعتنا:</strong></p>
+                                <ul>
+                                    <li><strong>ماكينات حفر دوارة تقليدية:</strong> بعضها بسعة 3000 قدم (1000 متر)، مجهزة
+                                        بمحرك رئيسي مزدوج (Detroit Engine)، مضخة طين (7.5” x 10”)، وخطاف بسعة 40 طن.
+                                        وبعضها بسعة 1500 قدم مزودة بمحرك Detroit ومضخة طين (5.5” x 8”).</li>
+                                    <li><strong>حفارات مطارق (Hammer Drills):</strong> بعضها بسعة 2000 قدم مجهزة بضاغط
+                                        هواء 1000 CFM و 750 psi، مع مضخة حقن للرغوة.</li>
+                                </ul>
+                                <p><strong>الدعم اللوجستي:</strong> ترفق بكل ماكينة مقطورة لنقل المياه والأنابيب، بالإضافة
+                                    إلى سيارة طوارئ صغيرة، مولد، ماكينات لحام، وقضبان حفر، ومعدات متنوعة.</p>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p><strong>The company owns a group of water well rigs operating all over Sudan, using
+                                        modern technology (Gardener Denver). Our collection includes:</strong></p>
+                                <ul>
+                                    <li><strong>Conventional Rotary Drills:</strong> Some with 3000 feet (1000 m)
+                                        capacity, equipped with a Double Prime Mover (Detroit Engine), a Mud Pump (7.5” x
+                                        10”), and a 40-ton capacity hook. Others have 1500 feet capacity with a Detroit
+                                        engine and a Mud Pump (5.5” x 8”).</li>
+                                    <li><strong>Hammer Drills:</strong> Some Drilling Rigs with 2000 feet capacity,
+                                        equipped with a 1000 CFM 750 psi compressor and an injection pump for foam.</li>
+                                </ul>
+                                <p><strong>Logistical Support:</strong> Each machine has a trailer for transporting water
+                                    and pipes, in addition to a small emergency vehicle, generator, welding machines,
+                                    drilling bars, and various types of keys.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">تطوير وصيانة آبار المياه</span>
+                        <span class="lang-en inline-display">Water Well Development & Maintenance</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p><strong>تمتلك الشركة أكثر من ماكينة لتطوير وصيانة الآبار، مجهزة بـ:</strong> حفارة،
+                                    بيلر، ضاغط هواء (350 Psi, 1000 CFM)، وسيارة مجهزة بجميع المعدات الضرورية، ماكينة لحام،
+                                    ومولد، وأجهزة قياس منسوب المياه. يتولى مهندسون ذوو خبرة طويلة في هذا المجال عمليات
+                                    التنظيف والصيانة.</p>
+                                <p><strong>إنجازات الصيانة:</strong> نفذت الشركة عدداً من عمليات تنظيف الآبار في مناطق
+                                    مختلفة، بما في ذلك آبار يزيد عمرها عن 20 عامًا:</p>
+                                <ul>
+                                    <li>تم تنظيف آبار في المقلد وعادت للإنتاج بكفاءة.</li>
+                                    <li>تمت استعادة ستة آبار في ولاية الجزيرة تابعة لوزارة الشؤون الهندسية (عمرها 20
+                                        عامًا) إلى حالة ممتازة.</li>
+                                </ul>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p><strong>The company owns more than one water well development machine, each mounted
+                                        with:</strong> a drilling rig, bailer, 350 Psi 1000 CFM air compressor, and a
+                                    small car equipped with all necessary equipment, including a welding machine,
+                                    generator, pump, and water level measuring devices. Engineers with long experience
+                                    in this field handle the cleaning and maintenance.</p>
+                                <p><strong>Maintenance Achievements:</strong> The company has carried out a number of well
+                                    cleaning operations in different areas, including wells over 20 years old:</p>
+                                <ul>
+                                    <li>Wells in Muglad were cleaned and became productive.</li>
+                                    <li>Six wells in Gezira state belonging to the Ministry of Engineer Affairs (drilled
+                                        20 years ago) were cleaned, updated, and are now in excellent condition.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">تنفيذ أنظمة وشبكات الإمداد المائي</span>
+                        <span class="lang-en inline-display">Water Supply System Execution</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p><strong>القدرات والدراسات:</strong> نفذت الشركة عدداً من الدراسات ورسم الخرائط المساحية
+                                    في المدن والقرى لتركيب أنظمة الإمداد المائي، ولدينا مهندسون متخصصون في هذا المجال.</p>
+                                <p><strong>الإنجازات:</strong> قامت الشركة بتركيب شبكة إمداد مائي في مدينة هيا بولاية
+                                    البحر الأحمر بنجاح، بطول ستة كيلومترات.</p>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p><strong>Capabilities & Studies:</strong> The company carried out a number of studies
+                                    and drawing survey maps in towns and villages for the installation of water supply
+                                    systems. The company has specialized engineers in this field.</p>
+                                <p><strong>Achievement:</strong> The company has successfully installed the water supply
+                                    system in Haya city in Red Sea state, with a length of six kilometers.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">الدراسات الجيوفيزيائية</span>
+                        <span class="lang-en inline-display">Geo-Physical Studies</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p>قامت الشركة بعدد من الدراسات في مجال الجيوفيزياء في المواقع التالية:</p>
+                                <ul>
+                                    <li>جبال النوبة في قرية كايقا قيرو.</li>
+                                    <li>شمال كردفان، قرية البنات.</li>
+                                    <li>شرق السودان، سنكات، قبيط، دردريب.</li>
+                                </ul>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p>The company undertook a number of studies in geo-physics in the following locations:
+                                </p>
+                                <ul>
+                                    <li>The Nuba mountains in Kaiga giro village.</li>
+                                    <li>Northern Kordofan, Banat Village.</li>
+                                    <li>Eastern Sudan: Sinkat, Gabeit, Dardreib.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">العقود والمشاريع الرئيسية</span>
+                        <span class="lang-en inline-display">Major Contracts & Projects</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p>قامت الرخي بحفر مئات الآبار في القرى والمدن ومواقع البترول. ودخلت الشركة في مشروع
+                                    مشترك مع شركة النيل الكبرى (1999–2002) لحفر آبار المياه والنفط.</p>
+                                <p>كما شاركت في مشاريع اجتماعية واقتصادية مثل:</p>
+                                <ul>
+                                    <li>آبار بنك الزراعة في أمدرمان.</li>
+                                    <li>مشروع طريق شريان الشمال.</li>
+                                    <li>وزارة الإسكان – ولاية الخرطوم.</li>
+                                    <li>مدينة ود مدني الكبرى – الجزيرة.</li>
+                                    <li>مشاريع الياقوت والراجح الزراعية.</li>
+                                    <li>**إنجازات إضافية:** حفرت الشركة أكثر من 10 آبار في مايوم، بنتو، ميرم، ومناطق
+                                        أخرى في جنوب السودان. كما عملت على آبار نفطية بعمق يصل إلى 1700 قدم.</li>
+                                </ul>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p>Al-Rakhie drilled hundreds of wells across villages, towns, and petroleum sites. The
+                                    company entered a joint venture with the Greater Nile Company (1999–2002) for water
+                                    and oil well drilling.</p>
+                                <p>Also participated in socio-economic projects such as:</p>
+                                <ul>
+                                    <li>Agriculture Bank wells in Omdurman.</li>
+                                    <li>Northern lifeline road project.</li>
+                                    <li>Ministry of Housing – Khartoum State.</li>
+                                    <li>Wad Madani Al Kubra city – Aljazeera.</li>
+                                    <li>Al Yakut & Al Rajah Agricultural projects.</li>
+                                    <li>**Further Achievements:** The company drilled more than 10 wells in Mayom,
+                                        Bentiu, Meiram, and other areas of Southern Sudan. It also worked on petroleum
+                                        wells up to 1700 feet deep.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">تسجيل آبار المياه بالكهرباء</span>
+                        <span class="lang-en inline-display">Electrical Well Logging</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p>نفذت الشركة عمليات تسجيل كهربائي للآبار للمساعدة في تحديد المياه المالحة ومكامن
+                                    المياه في المناطق التالية:</p>
+                                <ul>
+                                    <li>ولاية الجزيرة، منطقة المناقل.</li>
+                                    <li>غرب كردفان.</li>
+                                    <li>الخرطوم، آبار الشرطة.</li>
+                                    <li>نجمة النيل، قرية الحرتياب.</li>
+                                    <li>أمدرمان وبحري، مصنع ثلج البرقدار.</li>
+                                </ul>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p>The company carried out electrical logging to help in identifying salty water and
+                                    water reservoirs in the following areas:</p>
+                                <ul>
+                                    <li>Gezira state, Managil area.</li>
+                                    <li>Western Kordofan.</li>
+                                    <li>Khartoum, Police wells.</li>
+                                    <li>Nile Star, El Hartiyab village.</li>
+                                    <li>Omdurman and Bahri, The Bergdar Ice Factory.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span class="lang-ar">آليات الرخي للأنابيب والأساسات الخرسانية</span>
+                        <span class="lang-en inline-display">Pipes & Concrete Foundation Works</span>
+                        <i class="fas fa-chevron-down accordion-icon"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            <div class="lang-ar">
+                                <p>تمتلك الشركة ثلاث ماكينات حفر يمكنها الحفر لعمق 30 مترًا وبمحيط 100 سم. وهي من نوعين:
+                                    إيطالية (بواسطة حامل) وبريطانية (بواسطة عجلات).</p>
+                                <p><strong>ملخص الإنجازات:</strong></p>
+                                <ul>
+                                    <li>ملعب ربك لكرة القدم.</li>
+                                    <li>مشروع كهرباء الدمازين.</li>
+                                    <li>مئات المباني في جميع أنحاء السودان.</li>
+                                </ul>
+                            </div>
+                            <div class="lang-en" dir="ltr">
+                                <p>The company owns three drilling machines which can drill to a depth of 30 meters with
+                                    a circumference of 100 cm. Two types: Italian (with stands) and British (with
+                                    wheels).</p>
+                                <p><strong>Achievements Summary:</strong></p>
+                                <ul>
+                                    <li>Rabak football stadium.</li>
+                                    <li>Damazin electricity project.</li>
+                                    <li>Hundreds of buildings across Sudan.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer id="contact-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-col footer-contact">
+                <h4>
+                    <span class="lang-ar">معلومات الاتصال</span>
+                    <span class="lang-en inline-display">Contact Info</span>
+                </h4>
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="lang-ar">المقر الرئيسي:</span>
+                        <span class="lang-en inline-display">Headquarters:</span>
+                    </strong>
+                    <p>
+                        <span class="lang-ar">الخرطوم - سوبا</span>
+                        <span class="lang-en inline-display">Khartoum - Soba</span>
+                    </p>
+                    <p>
+                        <a href="index.html#contact-form" class="view-details-link">
+                            <span class="lang-ar">عرض التفاصيل الكاملة</span>
+                            <span class="lang-en inline-display">View Full Details</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fab fa-whatsapp"></i>
+                        <span class="lang-ar">واتساب (مصر):</span>
+                        <span class="lang-en inline-display">WhatsApp (Egypt):</span>
+                    </strong>
+                    <p><a href="https://wa.me/201123494527" dir="ltr">+20 112 349 4527</a></p>
+                </div>
+
+                <div class="contact-block">
+                    <strong>
+                        <i class="fas fa-envelope"></i>
+                        <span class="lang-ar">البريد الإلكتروني:</span>
+                        <span class="lang-en inline-display">Email:</span>
+                    </strong>
+                    <p><a href="mailto:rakhinter@alrakhie.net">rakhinter@alrakhie.net</a></p>
+                    <p><a href="mailto:rakhinter@yahoo.com">rakhinter@yahoo.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4>
+                    <span class="lang-ar">روابط سريعة</span>
+                    <span class="lang-en inline-display">Quick Links</span>
+                </h4>
+                <ul>
+                    <li><a href="index.html#about"><span class="lang-ar">عن الشركة</span><span
+                                class="lang-en inline-display">About Us</span></a></li>
+                    <li><a href="index.html#services"><span class="lang-ar">خدماتنا</span><span
+                                class="lang-en inline-display">Services</span></a></li>
+                    <li><a href="certificates.html"><span class="lang-ar">الشهادات</span><span
+                                class="lang-en inline-display">Certificates</span></a></li>
+                    <li><a href="gallery.html"><span class="lang-ar">المعرض</span><span
+                                class="lang-en inline-display">Gallery</span></a></li>
+                    <li><a href="index.html#recent-news"><span class="lang-ar">الأخبار</span><span
+                                class="lang-en inline-display">News</span></a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-social">
+                <h4>
+                    <span class="lang-ar">تابعنا وتواصل معنا</span>
+                    <span class="lang-en inline-display">Follow & Connect</span>
+                </h4>
+                <p>
+                    <span class="lang-ar">تابع جديدنا وعروضنا الخاصة على صفحاتنا الاجتماعية.</span>
+                    <span class="lang-en inline-display">Stay updated with our latest offers and projects on social
+                        media.</span>
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1CDMniWRSy/" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alrakhie.international?igsh=ZGs0N3E0b2NvMWpw" target="_blank"
+                        aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    <span class="lang-ar">&copy; 2025 جميع الحقوق محفوظة لشركة الرخي العالمية المحدودة.</span>
+                    <span class="lang-en inline-display">&copy; 2025 All Rights Reserved to Al Raki International
+                        Ltd.</span>
+                </p>
+                <p class="design-credit">
+                    <span class="lang-ar">
+                        تصميم وبرمجة بواسطة
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                    <span class="lang-en inline-display">
+                        Design and programming by
+                        <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL"
+                            target="_blank">
+                            <strong class="credit-link">GMTWEB</strong>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div id="quick-contact-mobile">
+        <a href="tel:+249918201681" class="quick-btn phone-btn" aria-label="اتصل الآن: 00249918201681">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <a href="https://wa.me/201123494527" target="_blank" class="quick-btn whatsapp-btn" aria-label="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+
+</html>

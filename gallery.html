@@ -10,14 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- تنسيقات خاصة بالصفحة -->
     <style>
-        /* لضمان عرض الجزء الرئيسي أسفل الهيدر مباشرة */
         #gallery-page-content {
             padding-top: 100px;
         }
 
-        /* تنسيق الشبكة لصفحة المعرض (مطابق لتنسيق Gallery في CSS الأصلي) */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -71,13 +68,15 @@
 
 <body>
 
-    <!-- الهيدر وشريط التنقل (يجب أن تكون نسخة طبق الأصل من index.html) -->
     <header id="main-header">
         <div class="container header-content">
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo.png" alt="Al Raki International Logo" class="main-logo-img">
-                    <span class="sub-text">Al Raki International Ltd</span>
+                    <img src="images/logo2-removebg-preview.png" class="main-logo-img lang-ar">
+                    <img src="images/logo_en-removebg-preview.png" alt="Al Raki International Logo"
+                        class="main-logo-img lang-en inline-display">
+
+                    <!-- <span class="sub-text">Al Raki International Ltd</span> -->
                 </a>
             </div>
             <nav id="main-nav">
@@ -85,13 +84,14 @@
                     <span class="lang-ar">الرئيسية</span>
                     <span class="lang-en">home</span>
                 </a>
-                <a href="index.html#services">
-                    <span class="lang-ar">خدماتنا</span>
-                    <span class="lang-en">services</span>
-                </a>
+                
                 <a href="index.html#about">
                     <span class="lang-ar">عن الشركة</span>
                     <span class="lang-en">About</span>
+                </a>
+                <a href="index.html#services">
+                    <span class="lang-ar">خدماتنا</span>
+                    <span class="lang-en">services</span>
                 </a>
                 <a href="certificates.html">
                     <span class="lang-ar">الشهادات</span>
@@ -119,7 +119,6 @@
         </div>
     </header>
 
-    <!-- محتوى الصفحة الجديد (بديل لقسم المعرض) -->
     <section id="gallery-page-content" class="section-padding">
         <div class="container">
             <h2 class="section-title">
@@ -128,7 +127,6 @@
             </h2>
 
             <div class="gallery-grid">
-                <!-- صور المعرض (كما كانت في index.html) -->
                 <a href="images/img11.jpeg" class="gallery-item" aria-label="عرض صورة حفر">
                     <img src="images/img11.jpeg" alt="صورة حفر مشروع 1">
                     <div class="gallery-overlay"></div>
@@ -182,12 +180,31 @@
                     <img src="images/img22.jpeg" alt="صورة معدات ثقيلة">
                     <div class="gallery-overlay"></div>
                 </a>
+                 <a href="images/img24.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
+                    <img src="images/img24.jpeg" alt="صورة معدات ثقيلة">
+                    <div class="gallery-overlay"></div>
+                </a>
+                 <a href="images/img25.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
+                    <img src="images/img25.jpeg" alt="صورة معدات ثقيلة">
+                    <div class="gallery-overlay"></div>
+                </a>
+                 <a href="images/img27.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
+                    <img src="images/img27.jpeg" alt="صورة معدات ثقيلة">
+                    <div class="gallery-overlay"></div>
+                </a>
+                  <a href="images/img28.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
+                    <img src="images/img28.jpeg" alt="صورة معدات ثقيلة">
+                    <div class="gallery-overlay"></div>
+                </a>
+                <a href="images/img29.jpeg" class="gallery-item" aria-label="عرض صورة للمعدات">
+                    <img src="images/img29.jpeg" alt="صورة معدات ثقيلة">
+                    <div class="gallery-overlay"></div>
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- الفوتر (Footer) - يبقى كما هو ولكن مع تحديث الروابط -->
     <footer id="contact-footer">
         <div class="container footer-grid">
 
@@ -314,7 +331,6 @@
         </a>
     </div>
 
-    <!-- يجب استخدام ملف script.js نفسه -->
     <script src="script.js"></script> 
 </body>
 
