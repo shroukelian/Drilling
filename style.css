@@ -464,6 +464,33 @@ body.en .next {
 }
 
 /* -------------------- 4. عن الشركة (المدير) -------------------- */
+/* أضف هذا الكود في نهاية ملف style.css أو ضمن منطقة العناوين */
+.about-content .section-title-inline {
+    font-size: 1.8rem; /* أصغر من العنوان الرئيسي */
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 0; /* إزالة الشريط البرتقالي أسفله */
+}
+
+/* للتأكد من إزالة الشريط البرتقالي تحته */
+.about-content .section-title-inline::after {
+    display: none;
+}
+
+/* تنسيق عناوين الأقسام الجديدة h4 لتمييزها */
+.about-section-block h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* مسافة بين الأقسام الجديدة */
+.about-section-block {
+    margin-bottom: 30px; 
+    border-top: 1px solid var(--border-color); /* فاصل خفيف بين الأقسام */
+    padding-top: 20px;
+}
 .two-column-layout {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
