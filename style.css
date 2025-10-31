@@ -440,8 +440,10 @@ body.en .next {
 
 .service-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto; /* تم التعديل: إزالة الارتفاع الثابت */
+    object-fit: contain; /* تم التعديل: لعرض الصورة كاملة مع إمكانية ترك مساحة بيضاء */
+    display: block; /* لضمان أن الصورة تتصرف ككتلة */
+    
     /* فلتر رمادي خفيف يزال عند الهوفر */
     filter: grayscale(30%);
     transition: 0.3s;
@@ -616,8 +618,8 @@ body.en .bio-box {
 
 .certificate-image-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* لضمان ملء الصورة للحيز دون تشوه */
+    height: auto; /* إزالة الارتفاع الثابت */
+    object-fit: contain; /* لعرض الصورة كاملة */
     display: block;
     transition: transform 0.5s ease-in-out;
 }
@@ -1026,11 +1028,12 @@ body.en .contact-block i {
 
 .gallery-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* إزالة الارتفاع الثابت */
+    object-fit: contain; /* لعرض الصورة كاملة */
     display: block;
     transition: transform 0.5s ease-in-out;
 }
+
 
 .gallery-item:hover img {
     transform: scale(1.08);
