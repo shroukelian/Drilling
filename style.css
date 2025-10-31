@@ -594,38 +594,50 @@ body.en .bio-box {
 /* -------------------- 3. قسم الشهادات (Certificates) - التنسيق الجديد للصور -------------------- */
 
 .certificates-grid {
-    display: grid;
-    /* شبكة متجاوبة 3 أعمدة في الديسكتوب، عمودين في المتوسط */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px; 
+     display: grid;
+       grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        /* التوسيط: يطبق التوسيط على الشبكة داخل الحاوية */
+        justify-content: center;
+        max-width: 1000px; /* تحديد عرض أقصى للحاوية للتوسيط الجمالي */
+        margin: 0 auto;
+
 }
 
 .certificate-image-item {
     position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    display: block;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s, box-shadow 0.3s;
-    /* نسبة طول/عرض افتراضية 4:3 لتناسب معظم الشهادات */
-    aspect-ratio: 4/3; 
+        overflow: hidden;
+        border-radius: 8px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: 450px; 
 }
 
 .certificate-image-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .certificate-image-item img {
     width: 100%;
-    height: auto; /* إزالة الارتفاع الثابت */
-    object-fit: contain; /* لعرض الصورة كاملة */
-    display: block;
-    transition: transform 0.5s ease-in-out;
+        height: 100%; /* لملء الـ 450px التي تم تحديدها */
+        object-fit: contain; /* التعديل: هذا يضمن عرض الصورة كاملة دون قص */
+display: flex; 
+    justify-content: center; /* توسيط أفقي للمحتوى (الصورة) */
+    align-items: center;    /* توسيط رأسي للمحتوى (اختياري) */
+        width: 100%; /* **هذا هو الإضافة لملء عرض العمود بالكامل** */
+
+            transition: transform 0.5s ease-in-out;
+        padding: 5px; /* إضافة تباعد داخلي بسيط داخل الإطار */
+        background-color: white; /* لجعل الخلفية بيضاء تظهر كإطار */
 }
 
 .certificate-image-item:hover img {
-    transform: scale(1.05);
+    transform: none;
 }
 
 /* -------------------- 5. الإنجازات (Accordion) -------------------- */
@@ -1331,6 +1343,23 @@ body.en .form-group textarea:not([placeholder=""])+label {
         padding: 15px;
     }
 }
+ @media (max-width: 600px) {
+        .certificates-grid {
+            /* سيضمن عموداً واحداً فقط على شاشات الموبايل الصغيرة */
+            grid-template-columns: 1fr; 
+             max-width: 500px;
+        }
+        
+        .certificate-image-item {
+            /* تقليل ارتفاع الإطار ليناسب شاشة الموبايل */
+            height: 350px; 
+        }
+        
+        /* إخفاء الهيدر على الموبايل لتقليل المساحة المهدرة */
+        .certificate-image-item img {
+             padding: 0; /* تقليل البادينج في الموبايل */
+        }
+    }
 /* -------------------- 9. أزرار الاتصال العائمة (Sticky Mobile/Desktop Buttons) -------------------- */
 
 #quick-contact-mobile {
