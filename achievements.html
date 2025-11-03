@@ -4,83 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الرخي العالمية - معرض الصور</title>
+    <title>الرخي العالمية - الإنجازات والقدرات</title>
+    <!-- ربط ملف الـ CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Cairo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- تنسيقات خاصة بالصفحة -->
+    <!-- تنسيقات خاصة بالصفحة (لتصحيح ارتفاع المحتوى أسفل الهيدر) -->
     <style>
-        /* لضمان عرض الجزء الرئيسي أسفل الهيدر مباشرة */
-        #gallery-page-content {
+        #achievements-page-content {
             padding-top: 100px;
         }
 
-        /* تنسيق الشبكة لصفحة المعرض (مطابق لتنسيق Gallery في CSS الأصلي) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+        /* تنسيق خاص لإضافة مسافة بين النقاط */
+        .accordion-content-inner ul {
+            list-style: disc; /* للتأكد من وجود نقاط */
         }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            display: block;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.08);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 51, 78, 0.7);
-            color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.3rem;
-            font-weight: 700;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        .accordion-content-inner li {
+             margin-bottom: 8px; /* مسافة بين نقاط القائمة */
         }
     </style>
 </head>
 
 <body>
 
+    <!-- الهيدر وشريط التنقل (يجب أن تكون نسخة طبق الأصل من index.html مع تعديل الروابط) -->
     <header id="main-header">
         <div class="container header-content">
-                        <div class="logo">
+            <div class="logo">
                 <a href="index.html">
-                    <img src="images/logo2-removebg-preview.png" class="main-logo-img lang-ar">
+                    <!-- تم دمج اللوجو الثنائي -->
+                    <img src="images/logo2-removebg-preview.png" alt="شعار الرخي العالمية" class="main-logo-img lang-ar">
                     <img src="images/logo_en-removebg-preview.png" alt="Al Raki International Logo"
                         class="main-logo-img lang-en inline-display">
 
-                    <span class="sub-text lang-en">Al Raki International Ltd</span>
                     <span class="sub-text lang-ar">شركة الرخي العالمية المحدودة</span>
+                    <span class="sub-text lang-en">Al Raki International Ltd</span>
                 </a>
             </div>
             <nav id="main-nav">
@@ -88,14 +51,13 @@
                     <span class="lang-ar">الرئيسية</span>
                     <span class="lang-en">home</span>
                 </a>
-               
-                <a href="about.html">
-                    <span class="lang-ar">عن الشركة</span>
-                    <span class="lang-en">About</span>
-                </a>
-                 <a href="index.html#services">
+                <a href="index.html#services">
                     <span class="lang-ar">خدماتنا</span>
                     <span class="lang-en">services</span>
+                </a>
+                <a href="index.html#about">
+                    <span class="lang-ar">عن الشركة</span>
+                    <span class="lang-en">About</span>
                 </a>
                 <a href="certificates.html">
                     <span class="lang-ar">الشهادات</span>
@@ -109,7 +71,7 @@
                     <span class="lang-ar">المعرض</span>
                     <span class="lang-en">Gallery</span>
                 </a>
-                <a href="contact-form.html" class="cta-button">
+                <a href="index.html#contact-form" class="cta-button">
                     <span class="lang-ar">تواصل معنا</span>
                     <span class="lang-en">contact Us</span>
                 </a>
@@ -122,252 +84,137 @@
             </button>
         </div>
     </header>
-
-    <section id="achievements" class="section-padding">
+    
+    <!-- محتوى صفحة الإنجازات الجديد -->
+    <section id="achievements-page-content" class="section-padding">
         <div class="container">
             <h2 class="section-title">
-                <span class="lang-ar">إمكانياتنا وإنجازاتنا</span>
-                <span class="lang-en inline-display">Our Capabilities & Key Achievements</span>
+                <span class="lang-ar">إنجازاتنا وقدراتنا الفنية</span>
+                <span class="lang-en inline-display">Our Key Achievements & Technical Capabilities</span>
             </h2>
 
             <div class="achievements-accordion">
                 
+                <!-- 1. حفر الآبار - Water Well Drilling -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span class="lang-ar">أدوات وماكينات الحفر (Rotary & Hammer)</span>
-                        <span class="lang-en inline-display">Drilling Tools and Machines (Rotary & Hammer)</span>
+                        <span class="lang-ar">1. حفر آبار المياه والمشاريع الرئيسية</span>
+                        <span class="lang-en inline-display">1. Water Well Drilling & Major Projects</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
                             <div class="lang-ar">
-                                <p><strong>تمتلك الشركة مجموعة من حفارات آبار المياه تعمل في جميع أنحاء السودان، وتستخدم
-                                        التقنيات الحديثة (Gardener Denver). تشمل مجموعتنا:</strong></p>
+                                <p>بدأت شركة الرخي العالمية أعمالها في عام 1986 بوحدتي حفر فقط، واليوم تمتلك أكثر من (13) وحدة حفر من أفضل الآليات الأمريكية من نوع **Gardner Denver**، مما مكنها من تنفيذ أكثر من **(1000) بئر** شملت جميع حقول البترول والقرى المجاورة وعلى امتداد خطوط أنابيب النفط.</p>
+                                <p><strong>أبرز الإنجازات:</strong></p>
                                 <ul>
-                                    <li><strong>ماكينات حفر دوارة تقليدية:</strong> بعضها بسعة 3000 قدم (1000 متر)، مجهزة
-                                        بمحرك رئيسي مزدوج (Detroit Engine)، مضخة طين (7.5” x 10”)، وخطاف بسعة 40 طن.
-                                        وبعضها بسعة 1500 قدم مزودة بمحرك Detroit ومضخة طين (5.5” x 8”).</li>
-                                    <li><strong>حفارات مطارق (Hammer Drills):</strong> بعضها بسعة 2000 قدم مجهزة بضاغط
-                                        هواء 1000 CFM و 750 psi، مع مضخة حقن للرغوة.</li>
+                                    <li>حفر **أعمق بئر مياه في السودان** بعمق **(630 متر / 2066 قدم)** لصالح شركة **2B للبترول** (GNPOC سابقاً) في حقل نيم.</li>
+                                    <li>حفر أكثر من **(400) بئر مياه** لصالح شركة **GNPOC** (لاحقاً **2B OPCO**) خلال الفترة من 1999 وحتى الآن.</li>
+                                    <li>حفر أكثر من **(300) بئر** لصالح شركة **بترو إنرجي الصينية (CNPC)** خلال الفترة من 2005 وحتى 2025 في حقول بليلة وحديدة.</li>
+                                    <li>تنفيذ **(15) بئرًا** لصالح المنظمة اليابانية للتعاون الدولي - **جايكا (Jica)** بولاية كسلا في وقت قياسي.</li>
+                                    <li>حفر (11) بئرًا لصالح شركة **نادك للتنمية الزراعية (السعودية)** بشمال كردفان.</li>
+                                    <li>المساهمة في مشاريع التنمية الكبرى (مثل **طريق شريان الشمال** – 8 آبار) ومشاريع البنوك (البنك الزراعي) والإسكان.</li>
                                 </ul>
-                                <p><strong>الدعم اللوجستي:</strong> ترفق بكل ماكينة مقطورة لنقل المياه والأنابيب، بالإضافة
-                                    إلى سيارة طوارئ صغيرة، مولد، ماكينات لحام، وقضبان حفر، ومعدات متنوعة.</p>
+                                <p>تستخدم الشركة جميع طرق الحفر (الدوار، الهواء والرغوة "همر"، والمطرقة الدقاقة) مع خبرة طويلة في أعمال **العزل الإسمنتي** لعزل الطبقات المالحة أو الملوثة.</p>
                             </div>
                             <div class="lang-en" dir="ltr">
-                                <p><strong>The company owns a group of water well rigs operating all over Sudan, using
-                                        modern technology (Gardener Denver). Our collection includes:</strong></p>
+                                <p>Al-Rakhie International began its operations in 1986 with only two drilling units. Today, the company owns more than 13 top-tier American drilling rigs of the **Gardner Denver** brand, enabling the execution of one of Sudan's largest water-well drilling programs, with over **1,000 wells** drilled across all oil fields, adjacent villages, and along oil pipeline routes.</p>
+                                <p><strong>Major Achievements:</strong></p>
                                 <ul>
-                                    <li><strong>Conventional Rotary Drills:</strong> Some with 3000 feet (1000 m)
-                                        capacity, equipped with a Double Prime Mover (Detroit Engine), a Mud Pump (7.5” x
-                                        10”), and a 40-ton capacity hook. Others have 1500 feet capacity with a Detroit
-                                        engine and a Mud Pump (5.5” x 8”).</li>
-                                    <li><strong>Hammer Drills:</strong> Some Drilling Rigs with 2000 feet capacity,
-                                        equipped with a 1000 CFM 750 psi compressor and an injection pump for foam.</li>
+                                    <li>Drilled the **deepest water well in Sudan** at a depth of **630 m (2066 ft)** for **2B Petroleum** (formerly GNPOC) at Neem oil field.</li>
+                                    <li>Drilled over **400 water wells** for **GNPOC** (later **2B OPCO**) from 1999 to the present.</li>
+                                    <li>Drilled over **300 wells** for **Petro Energy (CNPC)** between 2005 and 2025 in Baleela and Hadeeda fields.</li>
+                                    <li>Completed **15 wells** for **JICA** (Japan International Cooperation Agency) in Kassala State in a very short period.</li>
+                                    <li>Completed 11 wells for **NADEC Agricultural Development (Saudi Arabia)** in North Kordofan.</li>
+                                    <li>Contributed to major development projects (e.g., **North Corridor Road** – 8 wells) and banking (Agricultural Bank) and housing projects.</li>
                                 </ul>
-                                <p><strong>Logistical Support:</strong> Each machine has a trailer for transporting water
-                                    and pipes, in addition to a small emergency vehicle, generator, welding machines,
-                                    drilling bars, and various types of keys.</p>
+                                <p>The company utilizes all drilling methods (rotary, air and foam "hammer," and DTH) and has extensive experience in **cement grouting** to isolate saline or contaminated aquifers.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 2. الدراسات الجيوفيزيائية - Geophysical Studies -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span class="lang-ar">تطوير وصيانة آبار المياه</span>
-                        <span class="lang-en inline-display">Water Well Development & Maintenance</span>
+                        <span class="lang-ar">2. الدراسات والمسح الجيوفيزيائي</span>
+                        <span class="lang-en inline-display">2. Geo-physical Studies and Survey</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
                             <div class="lang-ar">
-                                <p><strong>تمتلك الشركة أكثر من ماكينة لتطوير وصيانة الآبار، مجهزة بـ:</strong> حفارة،
-                                    بيلر، ضاغط هواء (350 Psi, 1000 CFM)، وسيارة مجهزة بجميع المعدات الضرورية، ماكينة لحام،
-                                    ومولد، وأجهزة قياس منسوب المياه. يتولى مهندسون ذوو خبرة طويلة في هذا المجال عمليات
-                                    التنظيف والصيانة.</p>
-                                <p><strong>إنجازات الصيانة:</strong> نفذت الشركة عدداً من عمليات تنظيف الآبار في مناطق
-                                    مختلفة، بما في ذلك آبار يزيد عمرها عن 20 عامًا:</p>
+                                <p>قامت الشركة بعمل دراسات جيو فيزيائية في العديد من المواقع، بما في ذلك:</p>
                                 <ul>
-                                    <li>تم تنظيف آبار في المقلد وعادت للإنتاج بكفاءة.</li>
-                                    <li>تمت استعادة ستة آبار في ولاية الجزيرة تابعة لوزارة الشؤون الهندسية (عمرها 20
-                                        عامًا) إلى حالة ممتازة.</li>
+                                    <li>مناطق واسعة في **جبال النوبة**، وولاية **شمال، وجنوب، وغرب كردفان**.</li>
+                                    <li>حقل **بليلة** للبترول لشركة بترو إنرجي الصينية، وحقل **نيم** لشركة جنبوك للبترول.</li>
+                                    <li>مناطق في **شمال دارفور** (مثل بلوك 12 لصحاري للبترول) و **شرق السودان** (كسلا، سنكات، جبيت، دردريب).</li>
                                 </ul>
                             </div>
                             <div class="lang-en" dir="ltr">
-                                <p><strong>The company owns more than one water well development machine, each mounted
-                                        with:</strong> a drilling rig, bailer, 350 Psi 1000 CFM air compressor, and a
-                                    small car equipped with all necessary equipment, including a welding machine,
-                                    generator, pump, and water level measuring devices. Engineers with long experience
-                                    in this field handle the cleaning and maintenance.</p>
-                                <p><strong>Maintenance Achievements:</strong> The company has carried out a number of well
-                                    cleaning operations in different areas, including wells over 20 years old:</p>
+                                <p>The company has conducted geophysical surveys in several locations, including:</p>
                                 <ul>
-                                    <li>Wells in Muglad were cleaned and became productive.</li>
-                                    <li>Six wells in Gezira state belonging to the Ministry of Engineer Affairs (drilled
-                                        20 years ago) were cleaned, updated, and are now in excellent condition.</li>
+                                    <li>Extensive areas in the **Nuba Mountains**, and **North, South, and West Kordofan** states.</li>
+                                    <li>**Baleela** Oil Field for Petro Energy (CNPC) and **Neem** Oil Field for GNPOC.</li>
+                                    <li>Areas in **North Darfur** (e.g., Block 12 for Sahara Petroleum) and **Eastern Sudan** (Kassala, Sinkat, Jebeit, Dardareeb).</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 3. الرصد الكهربائي - Electrical Logging -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span class="lang-ar">تنفيذ أنظمة وشبكات الإمداد المائي</span>
-                        <span class="lang-en inline-display">Water Supply System Execution</span>
+                        <span class="lang-ar">3. الرصد والتسجيل الكهربائي للآبار (Electrical Logging)</span>
+                        <span class="lang-en inline-display">3. Electrical Logging for Wells</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
                             <div class="lang-ar">
-                                <p><strong>القدرات والدراسات:</strong> نفذت الشركة عدداً من الدراسات ورسم الخرائط المساحية
-                                    في المدن والقرى لتركيب أنظمة الإمداد المائي، ولدينا مهندسون متخصصون في هذا المجال.</p>
-                                <p><strong>الإنجازات:</strong> قامت الشركة بتركيب شبكة إمداد مائي في مدينة هيا بولاية
-                                    البحر الأحمر بنجاح، بطول ستة كيلومترات.</p>
-                            </div>
-                            <div class="lang-en" dir="ltr">
-                                <p><strong>Capabilities & Studies:</strong> The company carried out a number of studies
-                                    and drawing survey maps in towns and villages for the installation of water supply
-                                    systems. The company has specialized engineers in this field.</p>
-                                <p><strong>Achievement:</strong> The company has successfully installed the water supply
-                                    system in Haya city in Red Sea state, with a length of six kilometers.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span class="lang-ar">الدراسات الجيوفيزيائية</span>
-                        <span class="lang-en inline-display">Geo-Physical Studies</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <div class="lang-ar">
-                                <p>قامت الشركة بعدد من الدراسات في مجال الجيوفيزياء في المواقع التالية:</p>
+                                <p>تمتلك الشركة جهاز رصد كهربائي متكامل من **RG Robertson Geologging**، وقامت بعمل رصد كهربائي لتحديد المياه المالحة، الخزانات الحاملة للمياه، والكمية في المواقع التالية:</p>
                                 <ul>
-                                    <li>جبال النوبة في قرية كايقا قيرو.</li>
-                                    <li>شمال كردفان، قرية البنات.</li>
-                                    <li>شرق السودان، سنكات، قبيط، دردريب.</li>
+                                    <li>الجزيرة (منطقة المناقل)، غرب دارفور، الخرطوم (بئر الشرطة)، ولاية نهر النيل.</li>
+                                    <li>مصنع البرفدار للثلج (لأعمال عزل المياه الملوثة).</li>
+                                    <li>حقول البترول: بليلة، حديدة، هجليج، ونيم، بالإضافة إلى مشروع نادك السعودي.</li>
                                 </ul>
                             </div>
                             <div class="lang-en" dir="ltr">
-                                <p>The company undertook a number of studies in geo-physics in the following locations:
-                                </p>
+                                <p>The company owns a complete Electric Logging Unit from **RG Robertson Geologging** and has performed electrical logging to determine aquifer quality, depth, salinity, and water quantities in:</p>
                                 <ul>
-                                    <li>The Nuba mountains in Kaiga giro village.</li>
-                                    <li>Northern Kordofan, Banat Village.</li>
-                                    <li>Eastern Sudan: Sinkat, Gabeit, Dardreib.</li>
+                                    <li>Al-Managil (Gezira State), West Darfur, Khartoum (Police Well), and River Nile State.</li>
+                                    <li>Berfdar Ice Factory (for contaminated water isolation works).</li>
+                                    <li>Oil Fields: Baleela, Hadeeda, Heglig, and Neem, in addition to the NADEC Agricultural Project.</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 4. حفر الأساسات الخرسانية - Wedge Drilling & Concrete Works -->
                 <div class="accordion-item">
                     <button class="accordion-header">
-                        <span class="lang-ar">العقود والمشاريع الرئيسية</span>
-                        <span class="lang-en inline-display">Major Contracts & Projects</span>
+                        <span class="lang-ar">4. حفر الأساسات (الأسفينات) وأعمال الخرسانة المحدودة</span>
+                        <span class="lang-en inline-display">4. Wedge Drilling & Limited Concrete Works</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
                             <div class="lang-ar">
-                                <p>قامت الرخي بحفر مئات الآبار في القرى والمدن ومواقع البترول. ودخلت الشركة في مشروع
-                                    مشترك مع شركة النيل الكبرى (1999–2002) لحفر آبار المياه والنفط.</p>
-                                <p>كما شاركت في مشاريع اجتماعية واقتصادية مثل:</p>
+                                <p>تمتلك الشركة أحدث آلات حفر الأسفينات (أكثر من ثلاثة حفارات) يمكنها الحفر لعمق 30 متر بقطر 100 سم، مع طقم مهندسين مختصين لضمان استقامة عالية للأسفين. وتشمل الإنجازات:</p>
                                 <ul>
-                                    <li>آبار بنك الزراعة في أمدرمان.</li>
-                                    <li>مشروع طريق شريان الشمال.</li>
-                                    <li>وزارة الإسكان – ولاية الخرطوم.</li>
-                                    <li>مدينة ود مدني الكبرى – الجزيرة.</li>
-                                    <li>مشاريع الياقوت والراجح الزراعية.</li>
-                                    <li>**إنجازات إضافية:** حفرت الشركة أكثر من 10 آبار في مايوم، بنتو، ميرم، ومناطق
-                                        أخرى في جنوب السودان. كما عملت على آبار نفطية بعمق يصل إلى 1700 قدم.</li>
-                                </ul>
-                            </div>
-                            <div class="lang-en" dir="ltr">
-                                <p>Al-Rakhie drilled hundreds of wells across villages, towns, and petroleum sites. The
-                                    company entered a joint venture with the Greater Nile Company (1999–2002) for water
-                                    and oil well drilling.</p>
-                                <p>Also participated in socio-economic projects such as:</p>
-                                <ul>
-                                    <li>Agriculture Bank wells in Omdurman.</li>
-                                    <li>Northern lifeline road project.</li>
-                                    <li>Ministry of Housing – Khartoum State.</li>
-                                    <li>Wad Madani Al Kubra city – Aljazeera.</li>
-                                    <li>Al Yakut & Al Rajah Agricultural projects.</li>
-                                    <li>**Further Achievements:** The company drilled more than 10 wells in Mayom,
-                                        Bentiu, Meiram, and other areas of Southern Sudan. It also worked on petroleum
-                                        wells up to 1700 feet deep.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span class="lang-ar">تسجيل آبار المياه بالكهرباء</span>
-                        <span class="lang-en inline-display">Electrical Well Logging</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <div class="lang-ar">
-                                <p>نفذت الشركة عمليات تسجيل كهربائي للآبار للمساعدة في تحديد المياه المالحة ومكامن
-                                    المياه في المناطق التالية:</p>
-                                <ul>
-                                    <li>ولاية الجزيرة، منطقة المناقل.</li>
-                                    <li>غرب كردفان.</li>
-                                    <li>الخرطوم، آبار الشرطة.</li>
-                                    <li>نجمة النيل، قرية الحرتياب.</li>
-                                    <li>أمدرمان وبحري، مصنع ثلج البرقدار.</li>
-                                </ul>
-                            </div>
-                            <div class="lang-en" dir="ltr">
-                                <p>The company carried out electrical logging to help in identifying salty water and
-                                    water reservoirs in the following areas:</p>
-                                <ul>
-                                    <li>Gezira state, Managil area.</li>
-                                    <li>Western Kordofan.</li>
-                                    <li>Khartoum, Police wells.</li>
-                                    <li>Nile Star, El Hartiyab village.</li>
-                                    <li>Omdurman and Bahri, The Bergdar Ice Factory.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span class="lang-ar">آليات الرخي للأنابيب والأساسات الخرسانية</span>
-                        <span class="lang-en inline-display">Pipes & Concrete Foundation Works</span>
-                        <i class="fas fa-chevron-down accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-content-inner">
-                            <div class="lang-ar">
-                                <p>تمتلك الشركة ثلاث ماكينات حفر يمكنها الحفر لعمق 30 مترًا وبمحيط 100 سم. وهي من نوعين:
-                                    إيطالية (بواسطة حامل) وبريطانية (بواسطة عجلات).</p>
-                                <p><strong>ملخص الإنجازات:</strong></p>
-                                <ul>
-                                    <li>ملعب ربك لكرة القدم.</li>
+                                    <li>استاد ربك الرياضي.</li>
                                     <li>مشروع كهرباء الدمازين.</li>
-                                    <li>مئات المباني في جميع أنحاء السودان.</li>
+                                    <li>عشرات الفلل والعمارات ومباني المصانع بولاية الخرطوم.</li>
                                 </ul>
                             </div>
                             <div class="lang-en" dir="ltr">
-                                <p>The company owns three drilling machines which can drill to a depth of 30 meters with
-                                    a circumference of 100 cm. Two types: Italian (with stands) and British (with
-                                    wheels).</p>
-                                <p><strong>Achievements Summary:</strong></p>
+                                <p>The company owns modern wedge-drilling rigs (more than three) capable of reaching 30 meters depth with a 100 cm diameter, operated by a specialized engineering team ensuring high straightness. Major projects include:</p>
                                 <ul>
-                                    <li>Rabak football stadium.</li>
-                                    <li>Damazin electricity project.</li>
-                                    <li>Hundreds of buildings across Sudan.</li>
+                                    <li>Rabak Sports Stadium.</li>
+                                    <li>Damazine Power Project.</li>
+                                    <li>Dozens of villas, residential buildings, and industrial facilities in Khartoum State.</li>
                                 </ul>
                             </div>
                         </div>
@@ -379,6 +226,7 @@
     </section>
 
 
+    <!-- الفوتر (Footer) - يبقى كما هو ولكن مع تحديث الروابط -->
     <footer id="contact-footer">
         <div class="container footer-grid">
 
